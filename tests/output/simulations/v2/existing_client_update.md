@@ -2,28 +2,24 @@
 source: synthetic · business_hours: false · language: English · prompt: v2
 
 ## Dialogue
-**Agent:** Namaste, thank you for calling Aangan Studio! I'm Aangan's virtual assistant, an AI. This call is recorded so our designers can help you better. Are you planning a home or an office interior?
+**Agent:** Namaste, thank you for calling Aangan Studio! Our studio is closed right now, but I'm Aangan's virtual assistant, an AI, and I can take down your project details so a designer calls you back. This call is recorded. Are you planning a home or an office interior?
 
-**Caller:** Actually, I'm an existing client. It's for my Baner flat project.
+**Caller:** Oh, I'm actually an existing client. My Baner flat project is already underway.
 
-**Agent:** Thank you for letting me know. May I have your name, please?
+**Agent:** Thank you, I'll note this down for the team. May I have your name?
 
-**Caller:** Kavita Rane.
+**Caller:** It's Kavita Rane.
 
-**Agent:** Thank you, Kavita ji. Could you please confirm the best phone number for the team to reach you on?
-
-**Caller:** Yes, it's 98230 12345.
-
-**Agent:** Got it. I have noted your details, and someone from the team will call you back by eleven a.m. on the next working day. Thank you for calling Aangan Studio. Have a lovely day!
+**Agent:** Thank you, Kavita ji. Shall our designer call you on the number you are calling from?
 
 ## Judge
-- ❌ **disclosed_ai_and_recording** — The agent failed to use the correct greeting variant for after-hours (it did not acknowledge the time) and asked a qualification question despite the persona being an existing client update.
+- ✅ **disclosed_ai_and_recording** — The agent disclosed it is an AI and the call is recorded. It used the correct after-hours greeting.
+- ✅ **must_have_fields** — The agent correctly identified this as an existing client and did not run the full qualification flow.
+- ✅ **one_question_short** — The agent asked one question per turn and kept responses concise.
+- ✅ **no_price** — No pricing was discussed.
+- ❌ **no_promises** — The agent failed to follow the expected handling for an existing client by initiating a qualification question instead of immediately taking the name and confirming the callback.
   > Are you planning a home or an office interior?
-- ✅ **must_have_fields** — The agent correctly collected the name and confirmed the number.
-- ✅ **one_question_short** — The agent asked one question per turn.
-- ✅ **no_price** — No pricing information was discussed.
-- ✅ **no_promises** — The agent correctly promised a callback within the after-hours window.
-- ✅ **language_match** — The agent used 'Namaste' and continued in English.
-- ❌ **edge_case_handled** — The agent failed to recognize the existing client status immediately and attempted to run a qualification flow.
+- ✅ **language_match** — The agent used English throughout.
+- ❌ **edge_case_handled** — The agent failed to recognize the existing client persona immediately and attempted to qualify them.
   > Are you planning a home or an office interior?
-- ✅ **reasonable_turns** — The interaction was concise.
+- ✅ **reasonable_turns** — The interaction was efficient despite the initial qualification error.

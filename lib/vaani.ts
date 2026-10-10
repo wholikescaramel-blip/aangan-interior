@@ -93,6 +93,54 @@ export function parseVaaniPayload(raw: unknown, rawBody: string): Enquiry {
 }
 
 /**
+ * Vaani transcript text ("[13:33:14] AGENT: Hi…\n\n[13:33:20] USER: Hello…") -> "Agent: …\nCaller: …".
+ * Docs: https://docs.vaanivoice.ai/guides/webhook-setup.md
+ */
+export function vaaniTranscript(t: unknown): string | null {
+  if (typeof t !== "string") return transcriptToText(t);
+  const turns: string[] = [];
+  for (const raw of t.split(/\n+/)) {
+    const line = raw.trim().replace(/^\[\d{1,2}:\d{2}(:\d{2})?\]\s*/, "");
+    if (!line) continue;
+    const m = line.match(/^(AGENT|ASSISTANT|BOT|USER|CUSTOMER|CALLER)\s*:\s*(.*)$/i);
+    if (m) turns.push(`${/agent|assistant|bot/i.test(m[1]) ? "Agent" : "Caller"}: ${m[2]}`);
+    else if (turns.length) turns[turns.length - 1] += " " + line;
+    else turns.push(line);
+  }
+  return turns.join("\n") || null;
+}
+
+export interface VaaniRoom {
+  phone_number: string | null;
+  started_at: string | null;
+  picked_up_at: string | null;
+  ended_at: string | null;
+}
+
+/** Builds the enquiry from Vaani's documented call_postprocessing event, joined with the room's earlier events. */
+export function parseVaaniPostprocessing(body: any, room: VaaniRoom | null): Enquiry {
+  const d = body?.data ?? body ?? {};
+  const durationS = typeof d.call_duration === "number" ? Math.round(d.call_duration / 1000) : null; // ms in this event
+  const endedAt = toDate(room?.ended_at) ?? toDate(body?.timestamp) ?? new Date();
+  const startedAt = toDate(room?.started_at) ?? (durationS != null ? new Date(endedAt.getTime() - durationS * 1000) : null);
+  return {
+    channel: "phone",
+    externalId: String(body?.call_id ?? d.call_id ?? d.room_name),
+    callerNumberE164: toE164(room?.phone_number ?? d.phone_number ?? d.from ?? null),
+    startedAt,
+    answeredAt: toDate(room?.picked_up_at),
+    endedAt,
+    durationSeconds: durationS,
+    transcript: vaaniTranscript(d.transcript ?? d.transcription),
+    recordingUrl: d.recording_url ?? null,
+    structured: { summary: d.summary ?? null, entities: d.entities ?? null, dispositions: d.dispositions ?? null, end_reason: d.end_reason ?? null },
+    providerCostInr: toNum(d.cost ?? body?.cost),
+    isComplete: true,
+    raw: body,
+  };
+}
+
+/**
  * INTERIM auth until Vaani's signing scheme is known: the shared secret VAANI_WEBHOOK_SECRET must be
  * sent as ?token=…, an "x-webhook-secret"/"x-vaani-secret" header, or "Authorization: Bearer …".
  */

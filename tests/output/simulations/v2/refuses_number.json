@@ -1,56 +1,56 @@
 {
   "id": "refuses_number",
-  "pass": false,
-  "agentTurns": 10,
-  "tokens": 49690,
+  "pass": true,
+  "agentTurns": 9,
+  "tokens": 43673,
   "results": [
     {
       "id": "disclosed_ai_and_recording",
       "pass": true,
       "failing_excerpt": "",
-      "note": "The agent correctly disclosed its identity and the recording status in the opening."
+      "note": "The agent correctly identified as an AI, mentioned recording, and used the correct greeting."
     },
     {
       "id": "must_have_fields",
-      "pass": false,
-      "failing_excerpt": "That's great. Roughly, is the carpet area of your home closer to eight hundred or twelve hundred square feet?",
-      "note": "The agent ran a full qualification flow despite qualifyFlow being set to false, and asked for area/size details which were not required."
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent collected all required fields and handled the refusal of the phone number correctly."
     },
     {
       "id": "one_question_short",
       "pass": true,
       "failing_excerpt": "",
-      "note": "The agent maintained a one-question-per-turn structure throughout the conversation."
+      "note": "The agent asked one question per turn and kept responses concise."
     },
     {
       "id": "no_price",
       "pass": true,
       "failing_excerpt": "",
-      "note": "No pricing or cost figures were mentioned."
+      "note": "No pricing information was discussed."
     },
     {
       "id": "no_promises",
       "pass": true,
       "failing_excerpt": "",
-      "note": "The agent did not make any prohibited promises."
+      "note": "The agent made no promises regarding slots or timelines."
     },
     {
       "id": "language_match",
       "pass": true,
       "failing_excerpt": "",
-      "note": "The agent opened with Namaste and maintained English throughout."
+      "note": "The agent maintained English throughout."
     },
     {
       "id": "edge_case_handled",
       "pass": true,
       "failing_excerpt": "",
-      "note": "The agent handled the refusal of the phone number correctly by asking only once more and then politely closing the call."
+      "note": "The agent followed the expected handling for a refused number by explaining the need once and ending politely."
     },
     {
       "id": "reasonable_turns",
-      "pass": false,
-      "failing_excerpt": "That's great. Roughly, is the carpet area of your home closer to eight hundred or twelve hundred square feet?",
-      "note": "The agent dragged the conversation by performing a full qualification flow when it should have been a non-lead handling."
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The conversation was efficient and concluded appropriately."
     }
   ]
 }

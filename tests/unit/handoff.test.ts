@@ -213,3 +213,18 @@ describe("Vaani adapter (interim field mapping)", () => {
     expect(transcriptToText(null)).toBeNull();
   });
 });
+
+describe("Vaani documented format (call_postprocessing)", () => {
+  it("converts the timestamped transcript and joins the room's phone/timing", async () => {
+    const { parseVaaniPostprocessing, vaaniTranscript } = await import("../../lib/vaani");
+    expect(vaaniTranscript("[13:33:14] AGENT: Namaste!\n\n [13:33:20] USER: Home, in Baner.")).toBe("Agent: Namaste!\nCaller: Home, in Baner.");
+    const e = parseVaaniPostprocessing(
+      { event: "call_postprocessing", call_id: "inbound-1-abc", timestamp: "2026-10-10T09:05:00Z",
+        data: { room_name: "room-1", call_id: "inbound-1-abc", call_duration: 180500.5, transcript: "[13:33:14] AGENT: Hi\n\n[13:33:20] USER: Hello", recording_url: "https://rec/1.mp3", summary: "s", entities: { a: 1 } } },
+      { phone_number: "09876543210", started_at: "2026-10-10T09:01:00Z", picked_up_at: "2026-10-10T09:01:02Z", ended_at: "2026-10-10T09:04:00Z" },
+    );
+    expect(e).toMatchObject({ externalId: "inbound-1-abc", callerNumberE164: "+919876543210", durationSeconds: 181, recordingUrl: "https://rec/1.mp3", isComplete: true });
+    expect(e.transcript).toBe("Agent: Hi\nCaller: Hello");
+    expect(e.answeredAt!.getTime() - e.startedAt!.getTime()).toBe(2000);
+  });
+});

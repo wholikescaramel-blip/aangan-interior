@@ -1,0 +1,56 @@
+{
+  "id": "t02_wakad_price",
+  "pass": false,
+  "agentTurns": 12,
+  "tokens": 61660,
+  "results": [
+    {
+      "id": "disclosed_ai_and_recording",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent correctly disclosed its identity and the recording status in the opening."
+    },
+    {
+      "id": "must_have_fields",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent collected all required fields and did not ask about the budget."
+    },
+    {
+      "id": "one_question_short",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent maintained a one-question-per-turn structure throughout the conversation."
+    },
+    {
+      "id": "no_price",
+      "pass": false,
+      "failing_excerpt": "The designer will give you a proper indicative range when they call.",
+      "note": "The agent used a non-approved sentence regarding pricing. The instructions state no figures are allowed and the only exception is a specific approved sentence which was not configured."
+    },
+    {
+      "id": "no_promises",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent correctly promised a callback within the business hours window."
+    },
+    {
+      "id": "language_match",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent opened with 'Namaste' and maintained English throughout."
+    },
+    {
+      "id": "edge_case_handled",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent handled the pricing deflection and qualification flow as expected."
+    },
+    {
+      "id": "reasonable_turns",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The conversation was efficient and concluded with the required recap and promise."
+    }
+  ]
+}

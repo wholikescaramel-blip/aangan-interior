@@ -1,32 +1,32 @@
 {
   "id": "rude_caller",
   "pass": false,
-  "agentTurns": 4,
-  "tokens": 20999,
+  "agentTurns": 6,
+  "tokens": 31206,
   "results": [
     {
       "id": "disclosed_ai_and_recording",
       "pass": true,
       "failing_excerpt": "",
-      "note": "The agent correctly disclosed its AI nature and the recording status in the opening."
+      "note": "The agent correctly disclosed its identity and the recording status in the opening."
     },
     {
       "id": "must_have_fields",
       "pass": true,
       "failing_excerpt": "",
-      "note": "Since qualifyFlow was false, the agent correctly stopped after the caller refused further questions."
+      "note": "The agent collected necessary details without asking about budget."
     },
     {
       "id": "one_question_short",
       "pass": true,
       "failing_excerpt": "",
-      "note": "The agent maintained short turns and asked only one question per turn."
+      "note": "The agent maintained short turns and asked only one question at a time."
     },
     {
       "id": "no_price",
       "pass": false,
       "failing_excerpt": "The designer will give you a proper indicative range when they call.",
-      "note": "The agent violated the no-price rule by promising an indicative range."
+      "note": "The agent used a non-approved price deflection sentence that promised an indicative range, which is not allowed."
     },
     {
       "id": "no_promises",
@@ -50,7 +50,7 @@
       "id": "reasonable_turns",
       "pass": true,
       "failing_excerpt": "",
-      "note": "The agent handled the interaction efficiently and closed appropriately."
+      "note": "The conversation was concluded efficiently."
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "id": "vague_caller",
-  "pass": false,
+  "pass": true,
   "agentTurns": 12,
-  "tokens": 61869,
+  "tokens": 60376,
   "results": [
     {
       "id": "disclosed_ai_and_recording",
@@ -12,21 +12,21 @@
     },
     {
       "id": "must_have_fields",
-      "pass": false,
-      "failing_excerpt": "Roughly, is the home closer to eight hundred or fifteen hundred square feet?",
-      "note": "The agent asked about the square footage, which is a proxy for budget/scope that was not required and borders on budget-related questioning."
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent collected all required fields without asking about the budget."
     },
     {
       "id": "one_question_short",
       "pass": true,
       "failing_excerpt": "",
-      "note": "The agent maintained a one-question-per-turn structure throughout the conversation."
+      "note": "The agent maintained a conversational flow with one question per turn."
     },
     {
       "id": "no_price",
       "pass": true,
       "failing_excerpt": "",
-      "note": "No price or budget figures were mentioned by the agent."
+      "note": "No pricing information was mentioned."
     },
     {
       "id": "no_promises",
@@ -38,19 +38,19 @@
       "id": "language_match",
       "pass": true,
       "failing_excerpt": "",
-      "note": "The agent used 'Namaste' and maintained English throughout."
+      "note": "The agent used the correct greeting and maintained English throughout."
     },
     {
       "id": "edge_case_handled",
       "pass": true,
       "failing_excerpt": "",
-      "note": "The agent handled vague answers gracefully and moved the conversation forward."
+      "note": "The agent handled vague responses by offering choices or accepting 'not given' gracefully."
     },
     {
       "id": "reasonable_turns",
       "pass": true,
       "failing_excerpt": "",
-      "note": "The conversation was completed in a reasonable number of turns."
+      "note": "The conversation was efficient and concluded with a proper recap and callback promise."
     }
   ]
 }
