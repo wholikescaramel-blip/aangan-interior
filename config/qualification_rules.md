@@ -41,11 +41,12 @@ If M1–M4 is still missing after the agent asked twice, the result is `needs_re
 - Approximate **carpet area** (sq ft). Needed for the commercial size limit and the deal name.
 - **Property status**: under construction / ready / occupied.
 - **Decision-maker** (C5), asked lightly.
-- **How they heard of Aangan**.
+
 
 ### NEVER ASKED, recorded only if volunteered
 - **Budget** [DECISION]. qualified.md: *"Don't quote. Don't probe."*
 - **asked_about_pricing** (true/false). Never disqualifying.
+- **How they heard of Aangan** (source). Not asked (studio decision 2026-10-10); recorded only if the caller mentions it.
 
 ---
 
