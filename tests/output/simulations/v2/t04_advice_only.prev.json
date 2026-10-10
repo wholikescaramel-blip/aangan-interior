@@ -1,0 +1,56 @@
+{
+  "id": "t04_advice_only",
+  "pass": false,
+  "agentTurns": 2,
+  "tokens": 12373,
+  "results": [
+    {
+      "id": "disclosed_ai_and_recording",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Correctly identified as an AI assistant, stated call recording, and used the business hours greeting without asking 'How may I help you'."
+    },
+    {
+      "id": "must_have_fields",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "QualifyFlow is false and full qualification was properly avoided."
+    },
+    {
+      "id": "one_question_short",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Turns were concise and asked at most one question."
+    },
+    {
+      "id": "no_price",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "No pricing figures, rates, or budget terms were mentioned."
+    },
+    {
+      "id": "no_promises",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "No unauthorized promises were made."
+    },
+    {
+      "id": "language_match",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Greeted with 'Namaste' and conversed in English smoothly."
+    },
+    {
+      "id": "edge_case_handled",
+      "pass": false,
+      "failing_excerpt": "We're a full-service studio, so our projects always include both the design and the execution work together. We don't do advice-only visits, but do call us if you decide to go ahead with a full project! Have a lovely day!",
+      "note": "The agent did not check execution intent once (to see if the caller was open to execution) before directly rejecting the inquiry."
+    },
+    {
+      "id": "reasonable_turns",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Call concluded in a prompt and reasonable number of turns."
+    }
+  ]
+}

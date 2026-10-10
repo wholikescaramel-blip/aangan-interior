@@ -1,0 +1,56 @@
+{
+  "id": "wrong_number",
+  "pass": true,
+  "agentTurns": 2,
+  "tokens": 10228,
+  "results": [
+    {
+      "id": "disclosed_ai_and_recording",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Properly opened with Namaste, disclosed AI status and recording, and did not use 'How may I help you'."
+    },
+    {
+      "id": "must_have_fields",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Qualify flow is false, and full qualification was appropriately not triggered."
+    },
+    {
+      "id": "one_question_short",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Each turn was short and contained at most one question."
+    },
+    {
+      "id": "no_price",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "No price or cost references were made."
+    },
+    {
+      "id": "no_promises",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "No unauthorized promises were made."
+    },
+    {
+      "id": "language_match",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Started with Namaste and matched the caller's English language."
+    },
+    {
+      "id": "edge_case_handled",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Politely identified Aangan Studio as an interior design studio and closed the call."
+    },
+    {
+      "id": "reasonable_turns",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Ended promptly within two turns for a wrong number caller."
+    }
+  ]
+}

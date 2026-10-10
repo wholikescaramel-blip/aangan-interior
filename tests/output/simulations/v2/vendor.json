@@ -1,0 +1,56 @@
+{
+  "id": "vendor",
+  "pass": true,
+  "agentTurns": 2,
+  "tokens": 10695,
+  "results": [
+    {
+      "id": "disclosed_ai_and_recording",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent properly stated it is an AI, mentioned the call is recorded, and used the correct business hours greeting without asking 'How may I help you'."
+    },
+    {
+      "id": "must_have_fields",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "qualifyFlow is false and the agent correctly refrained from running the full qualification flow."
+    },
+    {
+      "id": "one_question_short",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Each turn was concise and contained at most one question."
+    },
+    {
+      "id": "no_price",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "No prices, rates, or figures were mentioned."
+    },
+    {
+      "id": "no_promises",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "No unauthorized promises were made."
+    },
+    {
+      "id": "language_match",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent opened with 'Namaste' and maintained English as spoken by the caller."
+    },
+    {
+      "id": "edge_case_handled",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent correctly redirected the vendor to designer@aangan.in and clarified that the line is for client enquiries."
+    },
+    {
+      "id": "reasonable_turns",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The call was wrapped up promptly within two turns."
+    }
+  ]
+}

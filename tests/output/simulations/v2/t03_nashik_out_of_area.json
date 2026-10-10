@@ -1,0 +1,56 @@
+{
+  "id": "t03_nashik_out_of_area",
+  "pass": true,
+  "agentTurns": 3,
+  "tokens": 15107,
+  "results": [
+    {
+      "id": "disclosed_ai_and_recording",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Properly opened with Namaste, stated it is an AI, and informed that the call is recorded without using 'How may I help you'."
+    },
+    {
+      "id": "must_have_fields",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "qualifyFlow is false; correctly stopped qualification once the location was determined to be outside service areas."
+    },
+    {
+      "id": "one_question_short",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Kept turns short and asked at most one question per turn."
+    },
+    {
+      "id": "no_price",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "No price figures or estimates were discussed."
+    },
+    {
+      "id": "no_promises",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "No unauthorized promises or commitments made."
+    },
+    {
+      "id": "language_match",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Greeted with Namaste and seamlessly matched caller's English language."
+    },
+    {
+      "id": "edge_case_handled",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Correctly handled out-of-area location by politely explaining service coverage is limited to Pune and PCMC, and closed the call gracefully."
+    },
+    {
+      "id": "reasonable_turns",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Call concluded efficiently in a reasonable number of turns."
+    }
+  ]
+}
