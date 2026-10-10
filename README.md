@@ -46,7 +46,7 @@ WhatsApp or a web form can be added later as new adapters.
 | `lib/` | vaani adapter, pipeline, qualify (Gemini), hubspot, telegram, calcom, claim, price guard |
 | `app/api/webhooks/{vaani,telegram,calcom}` | Webhooks |
 | `app/api/cron/sync` | Hourly HubSpot stage sync and retry of failed calls |
-| `app/dashboard` | Password-protected dashboard and per-call transcript pages |
+| `app/dashboard` | Dashboard (metrics, recent calls) and per-call transcript pages. Public by studio decision, hidden from search engines. |
 | `migrations/` | SQL migrations (`npm run migrate`) |
 | `tests/` | Unit tests, call simulations, 40-transcript qualification run |
 
@@ -59,6 +59,7 @@ WhatsApp or a web form can be added later as new adapters.
 - **The system moves deals only** on creation, on claim (DESIGNER_CONTACTED) and on booking
   (CONSULT_BOOKED). Won and lost are set by people.
 - **No timers or escalation** in this phase (see Next phases).
+- **The dashboard is public** (no password, by studio decision): anyone with the link can see caller names, numbers and transcripts. It is hidden from search engines (`robots.txt` + noindex). Re-adding a login later is a small change.
 - **`DRY_RUN=true`** (the default) skips HubSpot writes and sends Telegram cards only to the admin chat.
 
 ## Setup
@@ -91,7 +92,7 @@ Environment Variables; you can paste the whole file).
 | `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `TELEGRAM_ADMIN_CHAT_ID`, `TELEGRAM_WEBHOOK_SECRET`, `SEND_NEEDS_REVIEW` | `npm run telegram-setup -- chats` lists chat ids |
 | `CALCOM_WEBHOOK_SECRET`, `CALCOM_LINK` | Secret is pasted into Cal.com's webhook form |
 | `APP_BASE_URL` | e.g. `https://aangan-intake.vercel.app` |
-| `DASHBOARD_PASSWORD`, `CRON_SECRET` | |
+| `CRON_SECRET` | Protects the hourly job endpoint |
 | `FIXED_MONTHLY_COSTS_JSON` | e.g. `{"vaani_plan": 1500}` (INR) |
 | `DRY_RUN` | `true` until you've tested end to end |
 

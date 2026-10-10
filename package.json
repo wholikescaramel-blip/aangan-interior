@@ -13,7 +13,8 @@
     "migrate": "tsx --env-file-if-exists=.env scripts/migrate.ts",
     "hubspot-setup": "tsx --env-file-if-exists=.env scripts/hubspot_setup.ts",
     "telegram-setup": "tsx --env-file-if-exists=.env scripts/telegram_setup.ts",
-    "render-prompt": "tsx --env-file-if-exists=.env scripts/render_prompt.ts"
+    "render-prompt": "tsx --env-file-if-exists=.env scripts/render_prompt.ts",
+    "demo": "tsx --env-file-if-exists=.env scripts/demo_seed.ts"
   },
   "dependencies": {
     "@google/genai": "^2.28.0",
