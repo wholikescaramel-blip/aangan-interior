@@ -13,8 +13,9 @@ const PATTERNS: RegExp[] = [
   /\blakhs?\b|\blacs?\b|\blakh\b/i,
   /लाख/,
   /\bcrores?\b|करोड़/i,
-  /\bper\s*(sq\.?\s*(ft|feet|foot)|square\s*(feet|foot|ft))\b/i,
-  /\/\s*sq\.?\s*ft/i,
+  // A rate needs a number before it ("1,500 per sq ft"); "how much per square foot?" is only a question.
+  /\d[\d,.]*\s*(k\s*)?(rs\.?\s*)?(per|a|\/)\s*(sq\.?\s*(ft|feet|foot)|square\s*(feet|foot|ft))\b/i,
+  /\d\s*\/\s*sq\.?\s*ft/i,
   /\bpsf\b/i,
   /\b\d+(\.\d+)?\s*k\b\s*(per|\/)/i,
 ];

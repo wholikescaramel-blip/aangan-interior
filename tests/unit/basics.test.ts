@@ -79,3 +79,11 @@ describe("price guard", () => {
     "Call me on 98765 43210",
   ])("allows %s", (t) => expect(containsPriceFigure(t)).toBe(false));
 });
+
+describe("price guard: questions about rates are not rates", () => {
+  it("allows a pricing question without a figure, flags an actual rate", () => {
+    expect(containsPriceFigure("Caller asked how much per square foot we charge.")).toBe(false);
+    expect(containsPriceFigure("Another studio quoted 1,500 per sq ft.")).toBe(true);
+    expect(containsPriceFigure("They said 2k per sq ft")).toBe(true);
+  });
+});

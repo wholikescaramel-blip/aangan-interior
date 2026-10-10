@@ -38,7 +38,7 @@ export async function GET(req: Request) {
     SELECT id FROM calls
     WHERE (processing_status = 'failed' OR (processing_status IN ('received', 'processing') AND received_at < now() - interval '5 minutes'))
       AND received_at > now() - interval '3 days'
-    ORDER BY received_at LIMIT 10`) as { id: string }[];
+    ORDER BY received_at LIMIT 2`) as { id: string }[];
   for (const c of stuck) {
     await processCall(c.id);
     out.callsRetried++;

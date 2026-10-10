@@ -161,7 +161,7 @@ export function sanitize(q: Qualification): Qualification {
   const clean = (text: string) =>
     text
       .split(/\n|(?<=[.!?])\s+/)
-      .map((part) => (findPriceFigures(part).length ? "Budget: mentioned by caller." : part))
+      .map((part) => (findPriceFigures(part).length ? (/budget/i.test(part) ? "Budget: mentioned by caller." : redactMoney(part)) : part))
       .filter((part, i, arr) => part.trim() && !(part === "Budget: mentioned by caller." && arr.indexOf(part) !== i))
       .join(" ")
       .trim();
