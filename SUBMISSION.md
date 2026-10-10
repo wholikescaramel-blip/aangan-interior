@@ -15,6 +15,9 @@
 
 ## Components map → what was built
 
+As-built diagram: `docs/aangan_components_map_v2.svg` (original: `aangan_components_map.png`).
+
+
 | Map box | Built as |
 |---|---|
 | Caller: calls any hour, English or Hindi | Inbound phone number on **Vaani** |
