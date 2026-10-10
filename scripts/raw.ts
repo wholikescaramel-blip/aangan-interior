@@ -1,0 +1,2 @@
+import { sql } from "../lib/db";
+(async () => { const r = (await sql()`SELECT raw_payload FROM calls WHERE id = ${process.argv[2]}`) as any[]; const p = r[0].raw_payload; const d = p.data ?? p; console.log(JSON.stringify({ topKeys: Object.keys(p), dataKeys: Object.keys(d), call_duration: d.call_duration, end_reason: d.end_reason, summary: String(d.summary).slice(0, 200), entities: d.entities, recording_url: d.recording_url, transcriptLen: String(d.transcript ?? "").length }, null, 1)); })();

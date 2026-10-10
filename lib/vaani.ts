@@ -120,15 +120,19 @@ export interface VaaniRoom {
 /** Builds the enquiry from Vaani's documented call_postprocessing event, joined with the room's earlier events. */
 export function parseVaaniPostprocessing(body: any, room: VaaniRoom | null): Enquiry {
   const d = body?.data ?? body ?? {};
-  const durationS = typeof d.call_duration === "number" ? Math.round(d.call_duration / 1000) : null; // ms in this event
-  const endedAt = toDate(room?.ended_at) ?? toDate(body?.timestamp) ?? new Date();
-  const startedAt = toDate(room?.started_at) ?? (durationS != null ? new Date(endedAt.getTime() - durationS * 1000) : null);
+  // Docs say milliseconds; real payloads send seconds (e.g. 118.68). Large values are treated as ms.
+  const dur = typeof d.call_duration === "number" ? d.call_duration : null;
+  const durationS = dur == null ? null : Math.round(dur > 20000 ? dur / 1000 : dur);
+  const endedAt = toDate(d.call_ended_at) ?? toDate(room?.ended_at) ?? toDate(body?.timestamp) ?? new Date();
+  const startedAt =
+    toDate(d.call_started_at) ?? toDate(d.call_dialing_at) ?? toDate(room?.started_at) ??
+    (durationS != null ? new Date(endedAt.getTime() - durationS * 1000) : null);
   return {
     channel: "phone",
     externalId: String(body?.call_id ?? d.call_id ?? d.room_name),
-    callerNumberE164: toE164(room?.phone_number ?? d.phone_number ?? d.from ?? null),
+    callerNumberE164: toE164(d.phone_number ?? room?.phone_number ?? body?.from ?? d.from ?? null),
     startedAt,
-    answeredAt: toDate(room?.picked_up_at),
+    answeredAt: toDate(d.picked_up_at) ?? toDate(room?.picked_up_at),
     endedAt,
     durationSeconds: durationS,
     transcript: vaaniTranscript(d.transcript ?? d.transcription),
