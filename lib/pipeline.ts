@@ -62,7 +62,8 @@ async function withOneRetry<T>(stage: string, callId: string, fn: () => Promise<
 export async function processCall(callId: string): Promise<void> {
   const claimed = (await sql()`
     UPDATE calls SET processing_status = 'processing'
-    WHERE id = ${callId} AND processing_status IN ('received', 'failed')
+    WHERE id = ${callId} AND (processing_status IN ('received', 'failed')
+           OR (processing_status = 'processing' AND received_at < now() - interval '5 minutes'))
     RETURNING *`) as CallRow[];
   const call = claimed[0];
   if (!call) return; // already processing / done / ignored

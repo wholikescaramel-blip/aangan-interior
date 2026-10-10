@@ -15,7 +15,10 @@ export const geminiModel = () => process.env.GEMINI_MODEL || "gemini-3.8-flash";
  * Models to try in order. On the free tier each model has its own small daily request quota,
  * so when one is exhausted the next is used (GEMINI_FALLBACK_MODELS, comma-separated).
  */
-export function modelPool(primary = geminiModel(), fallbacks = process.env.GEMINI_FALLBACK_MODELS): string[] {
+// Default fallbacks are free-tier models with separate quotas and JSON-mode support.
+export const DEFAULT_FALLBACKS = "gemini-3.5-flash-lite,gemini-3.1-flash-lite,gemini-flash-lite-latest,gemini-3-flash-preview,gemini-3.6-flash,gemini-3.5-flash";
+
+export function modelPool(primary = geminiModel(), fallbacks = process.env.GEMINI_FALLBACK_MODELS || DEFAULT_FALLBACKS): string[] {
   const list = [primary, ...(fallbacks ?? "").split(",")].map((m) => m.trim()).filter(Boolean);
   return [...new Set(list)];
 }
@@ -58,7 +61,7 @@ export async function generate(opts: {
     }
     const model = ready[0];
     try {
-      const res = await withRetry(() => gemini().models.generateContent(request(model, opts)));
+      const res = await withRetry(() => gemini().models.generateContent(request(model, opts, timeoutMs())));
       return {
         text: res.text ?? "",
         model,
@@ -87,7 +90,11 @@ export class RateLimitedError extends Error {
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-function request(model: string, opts: Parameters<typeof generate>[0]) {
+/** Per-request timeout: a hung model fails fast and the next model in the pool is tried. */
+const timeoutMs = () => Number(process.env.GEMINI_TIMEOUT_MS || 20000);
+
+function request(model: string, opts: Parameters<typeof generate>[0], timeout: number) {
+  const abortSignal = AbortSignal.timeout(timeout);
   const json = opts.json ? { responseMimeType: "application/json", responseSchema: opts.json.schema } : {};
   // Gemma models on the Gemini API don't accept a system instruction: send it as the first user turn.
   if (model.startsWith("gemma")) {
@@ -98,12 +105,12 @@ function request(model: string, opts: Parameters<typeof generate>[0]) {
       first?.role === "user"
         ? [{ role: "user", parts: [{ text: `${opts.system}\n\n---\n\n` }, ...(first.parts ?? [])] }, ...contents.slice(1)]
         : [{ role: "user", parts: [{ text: opts.system }] }, ...contents];
-    return { model, contents: merged, config: { temperature: opts.temperature, ...json } };
+    return { model, contents: merged, config: { temperature: opts.temperature, abortSignal, ...json } };
   }
   return {
     model,
     contents: opts.contents,
-    config: { systemInstruction: opts.system, temperature: opts.temperature, ...json },
+    config: { systemInstruction: opts.system, temperature: opts.temperature, abortSignal, ...json },
   };
 }
 
@@ -116,9 +123,13 @@ async function withRetry<T>(fn: () => Promise<T>, attempts = 4): Promise<T> {
     } catch (err) {
       lastErr = err;
       const msg = String((err as Error)?.message ?? err);
+      // Timed out (hung request): cool this model for a minute and let the caller try another.
+      if (/abort|timed? ?out/i.test(msg) || (err as Error)?.name === "TimeoutError") throw new RateLimitedError(`timeout: ${msg}`, 60000);
       if (!/429|500|502|503|504|UNAVAILABLE|RESOURCE_EXHAUSTED|overloaded|INTERNAL/i.test(msg)) throw err;
       // Daily quota exhausted: retrying this model can't succeed today.
       if (/PerDay/i.test(msg)) throw new QuotaExhaustedError(msg);
+      // Overloaded model: one quick retry, then move on to the next model.
+      if (/503|UNAVAILABLE|overloaded|high demand/i.test(msg) && i >= 1) throw new RateLimitedError(msg, 120000);
       // Per-minute quota: hand back to the caller so it can use another model meanwhile.
       if (/RESOURCE_EXHAUSTED|429/.test(msg)) {
         const secs = Number(msg.match(/retry in ([\d.]+)s/i)?.[1] ?? msg.match(/"retryDelay":"(\d+)s"/)?.[1] ?? 30);

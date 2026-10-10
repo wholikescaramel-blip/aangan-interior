@@ -36,7 +36,7 @@ export async function GET(req: Request) {
 
   const stuck = (await sql()`
     SELECT id FROM calls
-    WHERE (processing_status = 'failed' OR (processing_status = 'received' AND received_at < now() - interval '5 minutes'))
+    WHERE (processing_status = 'failed' OR (processing_status IN ('received', 'processing') AND received_at < now() - interval '5 minutes'))
       AND received_at > now() - interval '3 days'
     ORDER BY received_at LIMIT 10`) as { id: string }[];
   for (const c of stuck) {
