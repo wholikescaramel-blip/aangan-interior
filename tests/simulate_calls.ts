@@ -38,7 +38,7 @@ const JUDGE_MODELS = modelPool("", process.env.SIM_JUDGE_MODELS || "gemini-3.7-f
 const REASONABLE_AGENT_TURNS = 20;
 
 const CB_BUSINESS = process.env.CALLBACK_WINDOW_BUSINESS_HOURS || "within an hour";
-const CB_AFTER = process.env.CALLBACK_WINDOW_AFTER_HOURS || "by eleven a.m. on the next working day";
+const CB_AFTER = process.env.CALLBACK_WINDOW_AFTER_HOURS || "first thing at ten a.m. when the studio opens. You'll be top of our list";
 const SIM_TODAY = "Friday, 9 October 2026";
 const APPROVED_TEXTS = [
   process.env.APPROVED_PRICE_BAND_TEXT?.trim() ?? "",

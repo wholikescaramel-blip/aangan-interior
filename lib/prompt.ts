@@ -54,7 +54,7 @@ export function isBusinessHoursIST(d: Date): boolean {
  */
 export function callbackWindowFor(d: Date, env: Record<string, string | undefined> = process.env): string {
   const businessWindow = env.CALLBACK_WINDOW_BUSINESS_HOURS || "within an hour";
-  const afterWindow = env.CALLBACK_WINDOW_AFTER_HOURS || "by eleven a.m. on the next working day";
+  const afterWindow = env.CALLBACK_WINDOW_AFTER_HOURS || "first thing at ten a.m. when the studio opens. You'll be top of our list";
   return isBusinessHoursIST(d) && isBusinessHoursIST(new Date(d.getTime() + 60 * 60 * 1000))
     ? businessWindow
     : afterWindow;

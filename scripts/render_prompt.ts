@@ -13,14 +13,14 @@ const version = process.argv[2] ?? AGENT_PROMPT_VERSION;
 const dir = path.join(process.cwd(), "agent", "rendered");
 mkdirSync(dir, { recursive: true });
 // "universal": one prompt for any time of day, for when Vaani cannot switch prompts by time.
-const UNIVERSAL_WINDOW = "within an hour during studio hours, which are Monday to Saturday, ten a.m. to seven p.m.";
+const UNIVERSAL_WINDOW = "within the hour, or, if we're closed right now, first thing at ten a.m. when the studio opens. You'll be top of our list";
 for (const [name, isBusinessHours] of [["business_hours", true], ["after_hours", false], ["universal", true]] as const) {
   const text = renderAgentPrompt(
     {
       isBusinessHours,
       callbackWindow: name === "universal" ? UNIVERSAL_WINDOW : isBusinessHours
         ? process.env.CALLBACK_WINDOW_BUSINESS_HOURS || "within an hour"
-        : process.env.CALLBACK_WINDOW_AFTER_HOURS || "by eleven a.m. on the next working day",
+        : process.env.CALLBACK_WINDOW_AFTER_HOURS || "first thing at ten a.m. when the studio opens. You'll be top of our list",
       approvedPriceBandText: process.env.APPROVED_PRICE_BAND_TEXT,
       approvedPriceBandTextOffice: process.env.APPROVED_PRICE_BAND_TEXT_OFFICE,
       callerNumberLast4: "",
