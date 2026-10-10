@@ -5,7 +5,7 @@
  * The system only ever moves a deal: on creation, to DESIGNER_CONTACTED on claim, and to
  * CONSULT_BOOKED on a booking. Won/lost are set by people in HubSpot.
  */
-import { isDryRun } from "./env";
+import { hubspotEnabled } from "./env";
 
 const BASE = "https://api.hubapi.com";
 
@@ -42,7 +42,7 @@ export function makeHubspotFetch(token = process.env.HUBSPOT_TOKEN, fetchImpl: t
 export class HubSpot {
   constructor(
     private readonly hs: HubspotFetch = makeHubspotFetch(),
-    private readonly dryRun = isDryRun(),
+    private readonly dryRun = !hubspotEnabled(),
   ) {}
 
   private async write(desc: string, path: string, method: string, body: unknown): Promise<any> {

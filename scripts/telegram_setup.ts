@@ -9,6 +9,10 @@ import { tg } from "../lib/telegram";
 async function main() {
   const cmd = process.argv[2] ?? "info";
   if (cmd === "chats") {
+    const me = await tg("getMe", {});
+    console.log(`Bot: @${me.username}`);
+    const hook = await tg("getWebhookInfo", {});
+    if (hook.url) console.log(`Note: a webhook is set (${hook.url}), so updates go there, not here. Use "/chatid" in a chat instead.`);
     const updates = await tg("getUpdates", { allowed_updates: ["message", "my_chat_member"] });
     const chats = new Map<string, string>();
     for (const u of updates) {

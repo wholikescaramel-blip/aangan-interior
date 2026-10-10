@@ -10,3 +10,6 @@ export function requireEnv(name: string): string {
   if (!v) throw new Error(`${name} is not set`);
   return v;
 }
+
+/** HubSpot writes happen only outside DRY_RUN and when a token is configured (phase 1 can run without a CRM). */
+export const hubspotEnabled = () => !isDryRun() && !!process.env.HUBSPOT_TOKEN;

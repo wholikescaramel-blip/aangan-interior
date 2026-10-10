@@ -10,7 +10,7 @@ import { isBusinessHoursIST } from "./prompt";
 import { qualify, type Qualification } from "./qualify";
 import { HubSpot, dealUrl } from "./hubspot";
 import { claimKeyboard, formatIST, formatLeadMessage, leadChatId, tg } from "./telegram";
-import { appUrl, isDryRun, sendNeedsReview } from "./env";
+import { appUrl, hubspotEnabled, isDryRun, sendNeedsReview } from "./env";
 
 export interface CallRow {
   id: string;
@@ -143,7 +143,7 @@ export async function syncHubspot(call: CallRow, q: Qualification, hubspot = new
   const wantsDeal = q.status === "qualified" || q.status === "needs_review";
   if (wantsDeal && !dealId) {
     const stageId = q.status === "qualified" ? process.env.HUBSPOT_STAGE_QUALIFIED : process.env.HUBSPOT_STAGE_NEEDS_REVIEW;
-    if (!stageId && !isDryRun()) throw new Error("HUBSPOT_STAGE_QUALIFIED / HUBSPOT_STAGE_NEEDS_REVIEW not set");
+    if (!stageId && hubspotEnabled()) throw new Error("HUBSPOT_STAGE_QUALIFIED / HUBSPOT_STAGE_NEEDS_REVIEW not set");
     dealId = await hubspot.createDeal({
       name: dealName(q),
       stageId: stageId ?? "",

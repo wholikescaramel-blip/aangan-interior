@@ -12,11 +12,13 @@ import { renderAgentPrompt, AGENT_PROMPT_VERSION } from "../lib/prompt";
 const version = process.argv[2] ?? AGENT_PROMPT_VERSION;
 const dir = path.join(process.cwd(), "agent", "rendered");
 mkdirSync(dir, { recursive: true });
-for (const [name, isBusinessHours] of [["business_hours", true], ["after_hours", false]] as const) {
+// "universal": one prompt for any time of day, for when Vaani cannot switch prompts by time.
+const UNIVERSAL_WINDOW = "within an hour during studio hours, which are Monday to Saturday, ten a.m. to seven p.m.";
+for (const [name, isBusinessHours] of [["business_hours", true], ["after_hours", false], ["universal", true]] as const) {
   const text = renderAgentPrompt(
     {
       isBusinessHours,
-      callbackWindow: isBusinessHours
+      callbackWindow: name === "universal" ? UNIVERSAL_WINDOW : isBusinessHours
         ? process.env.CALLBACK_WINDOW_BUSINESS_HOURS || "within an hour"
         : process.env.CALLBACK_WINDOW_AFTER_HOURS || "by eleven a.m. on the next working day",
       approvedPriceBandText: process.env.APPROVED_PRICE_BAND_TEXT,
