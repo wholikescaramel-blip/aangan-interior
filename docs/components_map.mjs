@@ -71,7 +71,7 @@ path([vb, [vb[0], gl[1]], gl]);
 const gr = port("gemini", "r"), busX = gr[0] + 22;
 for (const k of ["neon", "tg", "hub"]) { const l = port(k, "l"); path([gr, [busX, gr[1]], [busX, l[1]], l]); }
 const tb = port("tg", "b"), ht = port("hub", "t");
-path([[tb[0] + 70, tb[1]], [ht[0] + 70, ht[1]]], [tb[0] + 80, tb[1] + 16, "claim → Designer contacted"]);
+path([[tb[0] + 70, tb[1]], [ht[0] + 70, ht[1]]], [tb[0] - 120, tb[1] + 16, "claim → Designer contacted"]);
 const tl = port("tg", "l"), ctt = port("calTrig", "t");
 path([[tl[0], tl[1] + 22], [ctt[0], tl[1] + 22], ctt], [ctt[0] + 12, tl[1] + 16, "designer claims and calls back"]);
 const ctr = port("calTrig", "r"), cl = port("cal", "l");

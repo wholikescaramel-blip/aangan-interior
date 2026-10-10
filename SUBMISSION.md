@@ -15,7 +15,7 @@
 
 ## Components map → what was built
 
-As-built diagram: `docs/aangan_components_map_v2.svg` (original: `aangan_components_map.png`).
+As-built diagram: `docs/aangan_components_map_v2.png` (also `.svg`) (original: `aangan_components_map.png`).
 
 
 | Map box | Built as |
