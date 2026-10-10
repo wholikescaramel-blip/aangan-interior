@@ -18,8 +18,9 @@ export const geminiModel = () => process.env.GEMINI_MODEL || "gemini-3.8-flash";
 // Default fallbacks are free-tier models with separate quotas and JSON-mode support.
 export const DEFAULT_FALLBACKS = "gemini-3.5-flash-lite,gemini-3.1-flash-lite,gemini-flash-lite-latest,gemini-3-flash-preview,gemini-3.6-flash,gemini-3.5-flash";
 
-export function modelPool(primary = geminiModel(), fallbacks = process.env.GEMINI_FALLBACK_MODELS || DEFAULT_FALLBACKS): string[] {
-  const list = [primary, ...(fallbacks ?? "").split(",")].map((m) => m.trim()).filter(Boolean);
+export function modelPool(primary = geminiModel(), fallbacks = process.env.GEMINI_FALLBACK_MODELS ?? ""): string[] {
+  // The defaults are always appended, so an outdated env list can never leave the pool empty.
+  const list = [primary, ...fallbacks.split(","), ...DEFAULT_FALLBACKS.split(",")].map((m) => m.trim()).filter(Boolean);
   return [...new Set(list)];
 }
 
@@ -56,6 +57,8 @@ export async function generate(opts: {
     const ready = pool.filter((m) => (coolUntil.get(m) ?? 0) <= now);
     if (!ready.length) {
       const wait = Math.min(...pool.map((m) => coolUntil.get(m)!)) - now;
+      // Don't hold a serverless function for minutes: fail fast, the hourly job retries the call.
+      if (wait > 45000 && process.env.VERCEL) throw new QuotaExhaustedError(`All models busy for ${Math.round(wait / 1000)}s`);
       await sleep(Math.max(wait, 1000));
       continue;
     }
