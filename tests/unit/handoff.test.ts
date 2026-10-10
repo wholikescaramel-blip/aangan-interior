@@ -1,7 +1,7 @@
 import { createHmac } from "node:crypto";
 import { describe, expect, it, vi } from "vitest";
 import { formatLeadMessage, assertNoPrice } from "../../lib/telegram";
-import { sanitize, type Qualification } from "../../lib/qualify";
+import { redactMoney, sanitize, type Qualification } from "../../lib/qualify";
 import { HubSpot, type HubspotFetch } from "../../lib/hubspot";
 import { matchBooking, parseCalcom, verifyCalcom } from "../../lib/calcom";
 import { parseVaaniPayload, transcriptToText } from "../../lib/vaani";
@@ -71,6 +71,14 @@ describe("no rupee figure or per-sq-ft rate ever reaches Telegram or the summary
     const t = card(leaky); // formatLeadMessage would throw if a figure survived
     expect(containsPriceFigure(t)).toBe(false);
     expect(t).toContain("Budget: mentioned by caller");
+  });
+
+  it("redactMoney removes amounts but keeps rule ids and areas", () => {
+    const r = redactMoney("C4 FAIL: volunteered budget of 1 to 1.5 lakh for 550 sq ft; competitor said ₹1,500/sq ft");
+    expect(r).toContain("C4 FAIL");
+    expect(r).toContain("550 sq ft");
+    expect(containsPriceFigure(r)).toBe(false);
+    expect(redactMoney("C2 PASS: Baner")).toBe("C2 PASS: Baner");
   });
 
   it("assertNoPrice refuses a message with a figure", () => {

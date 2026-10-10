@@ -1,0 +1,35 @@
+{
+  "qualification": {
+    "status": "qualified",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: Scope is a complete redesign and execution of a 4BHK home (approx. 2,400 sq ft carpet)",
+      "C2 PASS: Site is in Koregaon Park (core Pune service area)",
+      "C3 PASS: Completion timeline is February (approx. 4 months / 16+ weeks away, well over the 10-week threshold)",
+      "C4 PASS: Budget not mentioned",
+      "C5 PASS: Caller is the homeowner/decision-maker"
+    ],
+    "collected": {
+      "name": "Aarti Mehta",
+      "phone": null,
+      "project_type": "home",
+      "location": "Koregaon Park",
+      "property_status": "ready",
+      "carpet_area_sqft": 2400,
+      "scope": "Complete redesign including new flooring, kitchen, and all four bedrooms",
+      "budget": null,
+      "timeline": "February (about 4 months)",
+      "decision_maker": "Aarti Mehta",
+      "source": "Referred by Vikram Agarwal (friend of Nikhil)",
+      "asked_about_pricing": false
+    },
+    "missing_info": [],
+    "summary": "Referred by Nikhil's close friend Vikram Agarwal. Full redesign of an unoccupied 2,400 sq ft 4BHK in Koregaon Park. Needs completion by February (~4 months). Budget: not mentioned. Interested in an on-site consultation visit early next week.",
+    "suggested_next_step": "Call back on caller ID to schedule the on-site consultation visit for early next week."
+  },
+  "model": "gemini-3.7-flash",
+  "inputTokens": 4242,
+  "outputTokens": 1983,
+  "attempts": 1,
+  "error": null
+}

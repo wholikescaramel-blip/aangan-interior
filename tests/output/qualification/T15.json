@@ -1,0 +1,35 @@
+{
+  "qualification": {
+    "status": "qualified",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: full home design and execution for a 2BHK flat",
+      "C2 PASS: site located in Undri (within Pune service area)",
+      "C3 PASS: possession in 6 weeks with design starting immediately",
+      "C4 PASS: budget not mentioned",
+      "C5 PASS: caller and husband are co-owners authorised to proceed"
+    ],
+    "collected": {
+      "name": "Smita",
+      "phone": null,
+      "project_type": "home",
+      "location": "Undri",
+      "property_status": "under construction",
+      "carpet_area_sqft": 875,
+      "scope": "full home (kitchen, wardrobes, living room)",
+      "budget": null,
+      "timeline": "possession in 6 weeks, design starting immediately",
+      "decision_maker": "caller and husband (owners)",
+      "source": null,
+      "asked_about_pricing": false
+    },
+    "missing_info": [],
+    "summary": "Smita called for full home design and execution for an 875 sq ft 2BHK in Undri. Possession expected in six weeks; builder will allow site access now for initial design work. Caller and her husband are owners and ready to proceed. Budget: not mentioned.",
+    "suggested_next_step": "Designer to call back using caller ID to arrange site visit and initial design consultation."
+  },
+  "model": "gemini-3.7-flash",
+  "inputTokens": 4245,
+  "outputTokens": 2686,
+  "attempts": 1,
+  "error": null
+}

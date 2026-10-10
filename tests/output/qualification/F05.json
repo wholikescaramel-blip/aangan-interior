@@ -1,0 +1,37 @@
+{
+  "qualification": {
+    "status": "qualified",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: commercial office fit-out within size limit and with execution",
+      "C2 PASS: location in Hinjewadi Phase 1, Pune",
+      "C3 PASS: timeline allows completion well over 10 weeks from call date",
+      "C4 PASS: budget mentioned by caller, designer to confirm fit",
+      "C5 PASS: operations head calling on behalf of company"
+    ],
+    "collected": {
+      "name": "Sheena Menon",
+      "phone": null,
+      "project_type": "office",
+      "location": "Hinjewadi Phase 1, Pune",
+      "property_status": "under construction",
+      "carpet_area_sqft": 2200,
+      "scope": "office fit-out for 60 employees including workstations, cabins, boardroom, meeting rooms, lounge, and pantry",
+      "budget": "60–80 lakh all-in (including furniture)",
+      "timeline": "Operational by January 15",
+      "decision_maker": "Operations Head",
+      "source": "CEO previously worked with Aangan Studio",
+      "asked_about_pricing": false
+    },
+    "missing_info": [
+      "callback number"
+    ],
+    "summary": "Commercial office fit-out for NovaSpark Technologies in Hinjewadi Phase 1. Shell and core property, ~2,200 sq ft, target operational by January 15. Scope includes workstations, cabins, meeting rooms, boardroom, lounge, and pantry. Budget: mentioned by caller. Referred by past client Amey Joshi; speed matters.",
+    "suggested_next_step": "Call Sheena Menon to discuss the office fit-out scope and schedule a consultation."
+  },
+  "model": "gemini-3.5-flash-lite",
+  "inputTokens": 4211,
+  "outputTokens": 427,
+  "attempts": 1,
+  "error": null
+}

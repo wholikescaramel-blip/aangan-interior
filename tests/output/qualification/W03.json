@@ -1,0 +1,33 @@
+{
+  "qualification": {
+    "status": "needs_review",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "M3 missing: timeline when the project must be complete was not asked or provided."
+    ],
+    "collected": {
+      "name": "Sunil Yadav",
+      "phone": null,
+      "project_type": "home",
+      "location": "Pimple Nilakh",
+      "property_status": null,
+      "carpet_area_sqft": null,
+      "scope": "3BHK full home",
+      "budget": "Budget bhi hai",
+      "timeline": "Saturday 4 October (consultation date, completion timeline not given)",
+      "decision_maker": null,
+      "source": null,
+      "asked_about_pricing": false
+    },
+    "missing_info": [
+      "Timeline (when the project must be complete)"
+    ],
+    "summary": "Caller Sunil Yadav has a 3BHK flat in Pimple Nilakh and wants full home interior design. Scope includes design and execution with a consultation booked for Saturday, 4 October at 10:30 AM. Budget: mentioned by caller. Timeline for completion is missing. Caller ID was withheld and a callback number was not collected.",
+    "suggested_next_step": "Obtain the callback phone number and ask when the project must be complete before final handoff."
+  },
+  "model": "gemini-3.5-flash-lite",
+  "inputTokens": 4220,
+  "outputTokens": 325,
+  "attempts": 1,
+  "error": null
+}

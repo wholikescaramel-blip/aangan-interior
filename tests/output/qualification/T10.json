@@ -1,0 +1,36 @@
+{
+  "qualification": {
+    "status": "not_qualified",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C4 FAIL: volunteered total under [amount] for a scope bigger than a single room"
+    ],
+    "collected": {
+      "name": null,
+      "phone": "+910000000000",
+      "project_type": "home",
+      "location": "Kharadi",
+      "property_status": null,
+      "carpet_area_sqft": 550,
+      "scope": "kitchen and one bedroom",
+      "budget": "1 to 1.5 lakh maximum",
+      "timeline": null,
+      "decision_maker": null,
+      "source": null,
+      "asked_about_pricing": true
+    },
+    "missing_info": [
+      "name",
+      "timeline",
+      "property_status",
+      "decision_maker"
+    ],
+    "summary": "Caller inquired about a partial home project in Kharadi. Budget: mentioned by caller. Pricing discussed and caller informed it falls below minimum scope.",
+    "suggested_next_step": "No action needed; lead is not qualified due to budget constraints."
+  },
+  "model": "gemini-3.5-flash-lite",
+  "inputTokens": 4242,
+  "outputTokens": 289,
+  "attempts": 1,
+  "error": null
+}

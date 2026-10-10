@@ -1,0 +1,41 @@
+{
+  "qualification": {
+    "status": "needs_review",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "Section 5 edge case: Missed call with no conversation, but caller ID is present",
+      "M1 MISSING: Project type and scope not collected",
+      "M2 MISSING: Location not confirmed by caller",
+      "M3 MISSING: Timeline not collected",
+      "M4 MISSING: Name not collected"
+    ],
+    "collected": {
+      "name": null,
+      "phone": null,
+      "project_type": null,
+      "location": null,
+      "property_status": null,
+      "carpet_area_sqft": null,
+      "scope": null,
+      "budget": null,
+      "timeline": null,
+      "decision_maker": null,
+      "source": null,
+      "asked_about_pricing": false
+    },
+    "missing_info": [
+      "project type and scope (M1)",
+      "location (M2)",
+      "timeline (M3)",
+      "name (M4)",
+      "callback number confirmation (M5)"
+    ],
+    "summary": "Missed call received after hours with no voicemail. Studio callback attempt the following morning went unanswered. No project or contact details gathered directly from caller. Caller ID is available for follow-up.",
+    "suggested_next_step": "Attempt another callback during business hours to connect with the caller and gather project details."
+  },
+  "model": "gemini-3.7-flash",
+  "inputTokens": 4090,
+  "outputTokens": 1292,
+  "attempts": 1,
+  "error": null
+}

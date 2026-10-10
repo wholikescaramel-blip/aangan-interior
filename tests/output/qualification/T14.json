@@ -1,0 +1,40 @@
+{
+  "qualification": {
+    "status": "needs_review",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C2 PASS: site in Hadapsar is within Pune service area",
+      "C5 needs_review: caller is son doing initial research for parents without clear mandate",
+      "M3 missing: completion timeline was not discussed",
+      "M4 missing: caller name was not provided",
+      "C1 needs_review: intent for full design and execution needs confirmation"
+    ],
+    "collected": {
+      "name": null,
+      "phone": "+910000000000",
+      "project_type": "home",
+      "location": "Hadapsar",
+      "property_status": "new possession",
+      "carpet_area_sqft": null,
+      "scope": "3BHK",
+      "budget": null,
+      "timeline": null,
+      "decision_maker": "Parents (caller is son doing initial checking)",
+      "source": null,
+      "asked_about_pricing": false
+    },
+    "missing_info": [
+      "caller name",
+      "completion timeline",
+      "carpet area",
+      "confirmation of design plus execution scope"
+    ],
+    "summary": "Enquiry for a 3BHK in Hadapsar (new possession). Caller is son conducting initial research for his parents. Parents will decide and attend the consultation directly. Execution intent and timeline yet to be confirmed. Budget: not mentioned.",
+    "suggested_next_step": "Call back to collect names, confirm timeline and execution scope, and coordinate consultation timing with parents."
+  },
+  "model": "gemini-3.7-flash",
+  "inputTokens": 4276,
+  "outputTokens": 1766,
+  "attempts": 1,
+  "error": null
+}

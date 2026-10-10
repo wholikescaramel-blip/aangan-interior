@@ -1,0 +1,40 @@
+{
+  "qualification": {
+    "status": "needs_review",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "Section 5 edge case: Asks only about pricing and provided no project info",
+      "M1 MISSING: Project type and scope not provided",
+      "M3 MISSING: Timeline not provided",
+      "M4 MISSING: Name missing",
+      "M5 MISSING: Callback number missing"
+    ],
+    "collected": {
+      "name": null,
+      "phone": null,
+      "project_type": null,
+      "location": "Pune",
+      "property_status": null,
+      "carpet_area_sqft": null,
+      "scope": null,
+      "budget": null,
+      "timeline": null,
+      "decision_maker": null,
+      "source": "Instagram",
+      "asked_about_pricing": true
+    },
+    "missing_info": [
+      "name",
+      "callback number",
+      "project type and scope",
+      "timeline"
+    ],
+    "summary": "Enquiry via Instagram web form asking for price list. Name, contact number, scope, and timeline missing. Location listed as Pune. Budget: not mentioned. Requested pricing before providing details.",
+    "suggested_next_step": "Reply via email to request phone number and project details before discussing scope."
+  },
+  "model": "gemini-3.6-flash",
+  "inputTokens": 4126,
+  "outputTokens": 1459,
+  "attempts": 1,
+  "error": null
+}

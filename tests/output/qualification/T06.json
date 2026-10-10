@@ -1,0 +1,38 @@
+{
+  "qualification": {
+    "status": "needs_review",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: 800 sq ft office fit-out (bare shell) with complete execution.",
+      "C2 PASS: Baner is within Pune service area.",
+      "C3 PASS: operational by December is >10 weeks from call date (5 Sep 2026).",
+      "C4 PASS: budget not mentioned.",
+      "C5 PASS: caller is founder and decision-maker.",
+      "M4 MISSING: caller name was not collected before the call ended."
+    ],
+    "collected": {
+      "name": null,
+      "phone": null,
+      "project_type": "office",
+      "location": "Baner",
+      "property_status": "bare shell",
+      "carpet_area_sqft": 800,
+      "scope": "workstations for 20 people, small cabin, meeting room, break area",
+      "budget": null,
+      "timeline": "operational by December",
+      "decision_maker": "founder",
+      "source": null,
+      "asked_about_pricing": false
+    },
+    "missing_info": [
+      "caller name"
+    ],
+    "summary": "Founder looking for full office fit-out for a startup in Baner. Bare shell space of 800 sq ft for 20 workstations, cabin, meeting room, break area. Timeline: operational by December. Budget: not mentioned. Caller disconnected or call ended before name was taken.",
+    "suggested_next_step": "Call back on caller ID to obtain founder's name and schedule consultation."
+  },
+  "model": "gemini-3.7-flash",
+  "inputTokens": 4250,
+  "outputTokens": 2025,
+  "attempts": 1,
+  "error": null
+}

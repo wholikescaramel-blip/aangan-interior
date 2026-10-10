@@ -1,0 +1,36 @@
+{
+  "qualification": {
+    "status": "not_qualified",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 FAIL: caller requested styling and decor advice only with no intent for design and execution"
+    ],
+    "collected": {
+      "name": null,
+      "phone": null,
+      "project_type": "home",
+      "location": null,
+      "property_status": null,
+      "carpet_area_sqft": null,
+      "scope": "living room styling and advice",
+      "budget": null,
+      "timeline": null,
+      "decision_maker": null,
+      "source": null,
+      "asked_about_pricing": false
+    },
+    "missing_info": [
+      "name",
+      "callback number",
+      "location",
+      "timeline"
+    ],
+    "summary": "Caller wanted ideas and colour/furniture suggestions for a living room. No intent for full design and execution ('just exploring for now'). Explained Aangan's end-to-end design and execution scope. Budget: not mentioned.",
+    "suggested_next_step": "No follow-up required; enquiry closed as advice/consultation only."
+  },
+  "model": "gemini-3.7-flash",
+  "inputTokens": 4213,
+  "outputTokens": 781,
+  "attempts": 1,
+  "error": null
+}

@@ -170,8 +170,19 @@ export function sanitize(q: Qualification): Qualification {
     not_a_lead_tag: q.status === "not_a_lead" ? q.not_a_lead_tag : null,
     summary: clean(q.summary),
     suggested_next_step: clean(q.suggested_next_step),
-    reasons: q.reasons.map((r) => (findPriceFigures(r).length ? r.replace(/₹?\s?[\d.,]+\s*(lakh|lac|crore|k)?/gi, "[figure]") : r)),
+    reasons: q.reasons.map(redactMoney),
   };
+}
+
+/** Replaces only money amounts and per-sq-ft rates; rule ids like "C4" and areas like "1,200 sq ft" stay. */
+export function redactMoney(text: string): string {
+  if (!findPriceFigures(text).length) return text;
+  return text
+    .replace(/(₹|\brs\.?|\binr\b)\s*[\d.,]+(\s*(-|–|to)\s*[\d.,]+)?(\s*(lakhs?|lacs?|crores?|k)\b)?/gi, "[amount]")
+    .replace(/\b[\d.,]+(\s*(-|–|to)\s*[\d.,]+)?\s*(lakhs?|lacs?|crores?)\b/gi, "[amount]")
+    .replace(/(\[amount\]|\b[\d.,]+)\s*(\/|per)\s*(sq\.?\s*(ft|feet|foot)|square\s*(feet|foot|ft))/gi, "[rate]")
+    .replace(/\b(rupees?|lakhs?|crores?)\b/gi, "[amount]")
+    .replace(/₹/g, "");
 }
 
 export function fallbackNeedsReview(error: string, phone: string | null): Qualification {

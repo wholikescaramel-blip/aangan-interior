@@ -1,0 +1,37 @@
+{
+  "qualification": {
+    "status": "qualified",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: Full home end-to-end residential design for a 5,500 sq ft villa",
+      "C2 PASS: Site located in Kalyani Nagar (within Pune service area)",
+      "C3 PASS: Move-in timeline is March next year, well over 10 weeks away",
+      "C4 PASS: Budget not mentioned",
+      "C5 PASS: Caller is representing the villa project directly"
+    ],
+    "collected": {
+      "name": "Anand Sharma",
+      "phone": null,
+      "project_type": "home",
+      "location": "Kalyani Nagar",
+      "property_status": "ready",
+      "carpet_area_sqft": 5500,
+      "scope": "villa, ground plus two floors, full end-to-end design",
+      "budget": null,
+      "timeline": "March next year to move in",
+      "decision_maker": null,
+      "source": null,
+      "asked_about_pricing": false
+    },
+    "missing_info": [
+      "callback number confirmation"
+    ],
+    "summary": "Anand Sharma enquiry for end-to-end interior design for a new 5,500 sq ft G+2 villa in Kalyani Nagar. Possession received last month; property is completely empty. Timeline is March next year to move in (caller noted no rush). Interested in an on-site consultation with the principal designer this week or next. Budget: not mentioned.",
+    "suggested_next_step": "Call back to confirm contact details and schedule the on-site consultation with the principal designer for this week or next."
+  },
+  "model": "gemini-3.7-flash",
+  "inputTokens": 4227,
+  "outputTokens": 2538,
+  "attempts": 1,
+  "error": null
+}

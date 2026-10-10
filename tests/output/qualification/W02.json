@@ -1,0 +1,37 @@
+{
+  "qualification": {
+    "status": "needs_review",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "M1-M4 missing: lead unresponsive after follow-up message with no project details provided."
+    ],
+    "collected": {
+      "name": null,
+      "phone": null,
+      "project_type": null,
+      "location": null,
+      "property_status": null,
+      "carpet_area_sqft": null,
+      "scope": "2bhk",
+      "budget": null,
+      "timeline": null,
+      "decision_maker": null,
+      "source": null,
+      "asked_about_pricing": true
+    },
+    "missing_info": [
+      "Name",
+      "Callback number",
+      "Location",
+      "Timeline",
+      "Project type and scope"
+    ],
+    "summary": "Caller asked about pricing for a 2bhk and became unresponsive after staff follow-up. Budget: not mentioned No project details or contact information provided yet.",
+    "suggested_next_step": "Send a follow-up message to check if they are still interested in a consultation."
+  },
+  "model": "gemini-3.5-flash-lite",
+  "inputTokens": 4133,
+  "outputTokens": 278,
+  "attempts": 1,
+  "error": null
+}

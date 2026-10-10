@@ -1,0 +1,31 @@
+{
+  "qualification": {
+    "status": "not_a_lead",
+    "not_a_lead_tag": "existing_client",
+    "reasons": [
+      "Section 5 not_a_lead: existing client complaint regarding ongoing project and unresponsive designer."
+    ],
+    "collected": {
+      "name": "Sheetal Deshpande",
+      "phone": null,
+      "project_type": "home",
+      "location": "Viman Nagar",
+      "property_status": null,
+      "carpet_area_sqft": null,
+      "scope": "2BHK",
+      "budget": null,
+      "timeline": null,
+      "decision_maker": null,
+      "source": null,
+      "asked_about_pricing": false
+    },
+    "missing_info": [],
+    "summary": "Existing client Sheetal Deshpande with an ongoing 2BHK project in Viman Nagar. Designer Aryan has not replied to messages or calls for five days. Caller is highly frustrated and demands an urgent callback within 15 minutes. Requested callback specifically from Nikhil or a senior lead. Handle with extreme care; escalate immediately.",
+    "suggested_next_step": "Escalate to Nikhil or senior studio lead for an immediate callback within 15 minutes to resolve the communication breakdown."
+  },
+  "model": "gemini-3.7-flash",
+  "inputTokens": 4260,
+  "outputTokens": 746,
+  "attempts": 1,
+  "error": null
+}

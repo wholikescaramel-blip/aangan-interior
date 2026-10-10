@@ -1,0 +1,37 @@
+{
+  "qualification": {
+    "status": "qualified",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: full home design and execution requested",
+      "C2 PASS: location in Koregaon Park",
+      "C3 PASS: site available for execution timeline",
+      "C4 PASS: budget not mentioned",
+      "C5 PASS: owner on call"
+    ],
+    "collected": {
+      "name": "Tanvi Kulkarni",
+      "phone": null,
+      "project_type": "home",
+      "location": "Koregaon Park",
+      "property_status": "ready",
+      "carpet_area_sqft": null,
+      "scope": "3BHK full home",
+      "budget": null,
+      "timeline": "October 15th possession",
+      "decision_maker": "self",
+      "source": "Ashok Bhosale",
+      "asked_about_pricing": false
+    },
+    "missing_info": [
+      "callback number"
+    ],
+    "summary": "Referred by Ashok Bhosale for a 3BHK in Koregaon Park with October 15th possession. Requested end-to-end design and confirmed availability for a site visit on October 21st or 22nd. Budget: not mentioned. Callback number missing from transcript, need to obtain from WhatsApp contact.",
+    "suggested_next_step": "Reach out on WhatsApp to confirm callback number and schedule the site visit for October 21st or 22nd."
+  },
+  "model": "gemini-3.5-flash-lite",
+  "inputTokens": 4228,
+  "outputTokens": 359,
+  "attempts": 1,
+  "error": null
+}

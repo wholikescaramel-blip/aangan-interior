@@ -1,0 +1,35 @@
+{
+  "qualification": {
+    "status": "qualified",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: Full home 3BHK residential project (1,150 sq ft)",
+      "C2 PASS: Site located in Kondhwa, Pune (within service area)",
+      "C3 PASS: Completion target March 2027 (approx 6 months away, >10 weeks)",
+      "C4 PASS: Budget not specified, to be discussed at consultation",
+      "C5 PASS: Direct inquiry from home owner ready to book"
+    ],
+    "collected": {
+      "name": "Amol Patil",
+      "phone": "[redacted]",
+      "project_type": "home",
+      "location": "Kondhwa",
+      "property_status": "ready",
+      "carpet_area_sqft": 1150,
+      "scope": "full home (3BHK)",
+      "budget": null,
+      "timeline": "Move in by March 2027",
+      "decision_maker": null,
+      "source": "Referred by builder (Rohan Lifescapes)",
+      "asked_about_pricing": false
+    },
+    "missing_info": [],
+    "summary": "Amol Patil submitted web form for full home 3BHK interiors in Kondhwa. 1,150 sq ft bare site, builder handover done. Needs project complete for March 2027 move-in. Budget: not mentioned (will discuss at consultation). Referred by builder Rohan Lifescapes; ready to schedule.",
+    "suggested_next_step": "Call back to book an initial design consultation."
+  },
+  "model": "gemini-3.6-flash",
+  "inputTokens": 4150,
+  "outputTokens": 1567,
+  "attempts": 1,
+  "error": null
+}

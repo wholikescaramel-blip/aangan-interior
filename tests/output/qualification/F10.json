@@ -1,0 +1,35 @@
+{
+  "qualification": {
+    "status": "qualified",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: full home and home office design and execution scope",
+      "C2 PASS: Aundh is within Pune service area",
+      "C3 PASS: ready to start immediately",
+      "C4 PASS: budget mentioned by caller",
+      "C5 PASS: home owners/decision-makers calling"
+    ],
+    "collected": {
+      "name": "Siddharth Gupta",
+      "phone": null,
+      "project_type": "home",
+      "location": "Aundh",
+      "property_status": "occupied",
+      "carpet_area_sqft": 1300,
+      "scope": "full home + home office (3BHK)",
+      "budget": "18–22 lakh for the full scope",
+      "timeline": "ready to start immediately",
+      "decision_maker": "Siddharth Gupta and wife",
+      "source": "LinkedIn",
+      "asked_about_pricing": false
+    },
+    "missing_info": [],
+    "summary": "Siddharth Gupta wants full home and dual home office design + execution for a 3BHK in Aundh. Occupied property (~1,300 sq ft), ready to start design immediately. Budget: mentioned by caller, designer to confirm fit. Note: Both owners are product designers requesting a collaborative design process. Handle with care: wants interactive iterations, not single option presentations.",
+    "suggested_next_step": "Schedule initial consultation with a designer to discuss project scope and collaborative workflow."
+  },
+  "model": "gemini-3.6-flash",
+  "inputTokens": 4215,
+  "outputTokens": 2269,
+  "attempts": 1,
+  "error": null
+}

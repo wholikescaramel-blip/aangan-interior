@@ -1,0 +1,38 @@
+{
+  "qualification": {
+    "status": "needs_review",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: interior design and fittings for living room, bedroom, and kitchen in a rented 2BHK (no structural changes)",
+      "C2 PASS: location in Baner is within the service area",
+      "M3 missing_info: project completion timeline not provided",
+      "M4 missing_info: caller name not provided"
+    ],
+    "collected": {
+      "name": null,
+      "phone": null,
+      "project_type": "home",
+      "location": "Baner",
+      "property_status": "occupied",
+      "carpet_area_sqft": null,
+      "scope": "living room, bedroom, and kitchen",
+      "budget": null,
+      "timeline": null,
+      "decision_maker": null,
+      "source": null,
+      "asked_about_pricing": false
+    },
+    "missing_info": [
+      "caller name",
+      "timeline",
+      "callback number confirmation"
+    ],
+    "summary": "Enquiry for rented 2BHK in Baner (living room, bedroom, kitchen). Landlord has approved reversible fittings with no structural changes. Call cut off before collecting caller name and timeline. Budget: not mentioned.",
+    "suggested_next_step": "Call back on caller ID to collect caller name, completion timeline, and schedule a consultation."
+  },
+  "model": "gemini-3.7-flash",
+  "inputTokens": 4279,
+  "outputTokens": 1173,
+  "attempts": 1,
+  "error": null
+}

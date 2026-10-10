@@ -1,0 +1,34 @@
+{
+  "qualification": {
+    "status": "needs_review",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "M3 missing: timeline for project completion was not asked or provided on the call"
+    ],
+    "collected": {
+      "name": "Pradeep Garg",
+      "phone": null,
+      "project_type": "home",
+      "location": "Aundh",
+      "property_status": null,
+      "carpet_area_sqft": 850,
+      "scope": "2BHK full interiors",
+      "budget": null,
+      "timeline": null,
+      "decision_maker": null,
+      "source": null,
+      "asked_about_pricing": false
+    },
+    "missing_info": [
+      "timeline",
+      "callback number"
+    ],
+    "summary": "Caller is highly frustrated due to a missed response over 4 days. Project is a 2BHK flat in Aundh with 850 sq ft full interiors. Handle with extreme care and escalate for immediate senior designer outreach.",
+    "suggested_next_step": "Senior designer to call Pradeep Garg today to apologize and collect missing timeline details."
+  },
+  "model": "gemini-3.5-flash-lite",
+  "inputTokens": 4304,
+  "outputTokens": 281,
+  "attempts": 1,
+  "error": null
+}

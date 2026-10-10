@@ -1,0 +1,37 @@
+{
+  "qualification": {
+    "status": "needs_review",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1: Project type and specific scope are unclear from the web form submission",
+      "M1: Missing specific project type and scope with design and execution intent",
+      "M2: Location is too broad (only Pune given without a specific locality)"
+    ],
+    "collected": {
+      "name": "Rajesh",
+      "phone": null,
+      "project_type": "Other",
+      "location": "Pune",
+      "property_status": null,
+      "carpet_area_sqft": null,
+      "scope": null,
+      "budget": "reasonable",
+      "timeline": "as soon as possible",
+      "decision_maker": null,
+      "source": "WhatsApp forward",
+      "asked_about_pricing": true
+    },
+    "missing_info": [
+      "Project type and scope",
+      "Location (specific locality)",
+      "Timeline completion date"
+    ],
+    "summary": "Web form submission from Rajesh asking about interior design cost. Project type is marked as other with no scope details provided. Location is mentioned only as Pune. Budget: mentioned by caller. Caller requested a callback.",
+    "suggested_next_step": "Call Rajesh to clarify project scope, exact locality, and completion timeline."
+  },
+  "model": "gemini-3.5-flash-lite",
+  "inputTokens": 4103,
+  "outputTokens": 321,
+  "attempts": 1,
+  "error": null
+}

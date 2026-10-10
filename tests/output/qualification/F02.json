@@ -1,0 +1,35 @@
+{
+  "qualification": {
+    "status": "qualified",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: Residential partial home project (bedroom + living room) with design and execution intent.",
+      "C2 PASS: Site in Baner, Pune, which is within the service area.",
+      "C3 PASS: Timeline is flexible with no specific deadline.",
+      "C4 PASS: Budget not mentioned.",
+      "C5 PASS: Caller is the homeowner making decisions."
+    ],
+    "collected": {
+      "name": "Laleh Contractor",
+      "phone": null,
+      "project_type": "home",
+      "location": "Baner, Pune",
+      "property_status": "ready",
+      "carpet_area_sqft": 1100,
+      "scope": "Partial home (master bedroom and living room)",
+      "budget": null,
+      "timeline": "No specific deadline",
+      "decision_maker": "Caller",
+      "source": "Friend's recommendation (Priya Wadia)",
+      "asked_about_pricing": false
+    },
+    "missing_info": [],
+    "summary": "Partial home project in Baner for master bedroom and living room. Builder flat, first time doing interiors professionally. Timeline is flexible with no specific deadline. Budget: not mentioned. Referred by Priya Wadia.",
+    "suggested_next_step": "Call Laleh Contractor to discuss the design process for the bedroom and living room."
+  },
+  "model": "gemini-3.5-flash-lite",
+  "inputTokens": 4173,
+  "outputTokens": 348,
+  "attempts": 1,
+  "error": null
+}

@@ -1,0 +1,34 @@
+{
+  "qualification": {
+    "status": "needs_review",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "M3 missing: timeline not provided by caller",
+      "M4 missing: name was provided in text but M3 timeline and complete project details are missing for full qualification"
+    ],
+    "collected": {
+      "name": "Meena Joshi",
+      "phone": null,
+      "project_type": "home",
+      "location": "Baner",
+      "property_status": null,
+      "carpet_area_sqft": null,
+      "scope": "2BHK",
+      "budget": null,
+      "timeline": null,
+      "decision_maker": null,
+      "source": null,
+      "asked_about_pricing": false
+    },
+    "missing_info": [
+      "timeline"
+    ],
+    "summary": "Inquiry for a 2BHK in Baner via WhatsApp. No response received to follow-up messages. Budget: not mentioned. Handle with care due to lack of response.",
+    "suggested_next_step": "Send another follow-up message to gather timeline and confirm interest."
+  },
+  "model": "gemini-3.5-flash-lite",
+  "inputTokens": 4207,
+  "outputTokens": 277,
+  "attempts": 1,
+  "error": null
+}

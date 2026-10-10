@@ -1,0 +1,34 @@
+{
+  "qualification": {
+    "status": "not_qualified",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 FAIL: restaurant interiors are out of scope"
+    ],
+    "collected": {
+      "name": null,
+      "phone": null,
+      "project_type": "other",
+      "location": "Koregaon Park",
+      "property_status": null,
+      "carpet_area_sqft": null,
+      "scope": "restaurant interiors",
+      "budget": null,
+      "timeline": null,
+      "decision_maker": null,
+      "source": null,
+      "asked_about_pricing": false
+    },
+    "missing_info": [
+      "name",
+      "timeline"
+    ],
+    "summary": "Caller asked for interior design for a new restaurant in Koregaon Park. Front desk explained that hospitality projects are out of scope. Caller asked for referrals, but none were provided.",
+    "suggested_next_step": "No follow-up required as restaurant projects are out of scope."
+  },
+  "model": "gemini-3.6-flash",
+  "inputTokens": 4213,
+  "outputTokens": 1226,
+  "attempts": 1,
+  "error": null
+}

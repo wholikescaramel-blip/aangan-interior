@@ -1,0 +1,35 @@
+{
+  "qualification": {
+    "status": "qualified",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: full home 4BHK with design and execution",
+      "C2 PASS: site in Viman Nagar, Pune service area",
+      "C3 PASS: execution starting November with completion well beyond the minimum lead time",
+      "C4 PASS: budget not mentioned",
+      "C5 PASS: owner on the chat"
+    ],
+    "collected": {
+      "name": "Kiran Mazumdar",
+      "phone": null,
+      "project_type": "home",
+      "location": "Viman Nagar",
+      "property_status": "ready",
+      "carpet_area_sqft": 1800,
+      "scope": "full home 4BHK",
+      "budget": null,
+      "timeline": "design in October, execution starting November",
+      "decision_maker": "Kiran Mazumdar",
+      "source": "Sonali Patel",
+      "asked_about_pricing": false
+    },
+    "missing_info": [],
+    "summary": "Referred by Sonali Patel, former client in Viman Nagar. 4BHK empty flat, approx 1800 sq ft carpet, ready possession. Wants design in October and execution starting November. Prefers consultations on weekdays after 6pm or weekends. Budget: not mentioned.",
+    "suggested_next_step": "Call to schedule a site visit consultation for weekday evening or weekend."
+  },
+  "model": "gemini-3.5-flash-lite",
+  "inputTokens": 4321,
+  "outputTokens": 355,
+  "attempts": 1,
+  "error": null
+}

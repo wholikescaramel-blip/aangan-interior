@@ -1,0 +1,35 @@
+{
+  "qualification": {
+    "status": "qualified",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: Full home redesign of a 3BHK apartment with design and execution intent.",
+      "C2 PASS: Site located in Kothrud (Dahanukar Colony), which is within Pune service area.",
+      "C3 PASS: Completion targeted by March (more than 10 weeks from call date, flexible timeline).",
+      "C4 PASS: Budget not mentioned.",
+      "C5 PASS: Caller is the owner along with her husband, fully aligned to proceed."
+    ],
+    "collected": {
+      "name": "Priya",
+      "phone": "+910000000000",
+      "project_type": "home",
+      "location": "Kothrud, Dahanukar Colony",
+      "property_status": null,
+      "carpet_area_sqft": 1400,
+      "scope": "full home (kitchen, living room, both bedrooms)",
+      "budget": null,
+      "timeline": "by March",
+      "decision_maker": "myself and my husband",
+      "source": "friend -- Shruti Joshi",
+      "asked_about_pricing": false
+    },
+    "missing_info": [],
+    "summary": "Priya is looking for a full redesign and execution of a 1,400 sq ft 3BHK in Kothrud (Dahanukar Colony). Referred by past client Shruti Joshi. Scope covers the whole home including kitchen, living room, and bedrooms. Timeline target is March and caller is in no rush. Budget: not mentioned. Both co-owners (caller and husband) are aligned.",
+    "suggested_next_step": "Call back to introduce the studio and schedule an initial consultation."
+  },
+  "model": "gemini-3.7-flash",
+  "inputTokens": 4292,
+  "outputTokens": 3778,
+  "attempts": 1,
+  "error": null
+}

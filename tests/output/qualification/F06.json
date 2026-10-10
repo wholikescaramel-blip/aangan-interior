@@ -1,0 +1,38 @@
+{
+  "qualification": {
+    "status": "needs_review",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: residential full home redesign and execution (4BHK)",
+      "C2 PASS: NIBM Road is within Pune service area",
+      "C3 PASS: execution starting February 2027 (>10 weeks away)",
+      "C4 PASS: budget mentioned by caller",
+      "C5 PASS: homeowner submitting direct enquiry",
+      "M5 FAIL: caller ID withheld and no callback phone number available"
+    ],
+    "collected": {
+      "name": "Preethi Nair",
+      "phone": null,
+      "project_type": "home",
+      "location": "NIBM Road, Pune",
+      "property_status": "occupied",
+      "carpet_area_sqft": 1950,
+      "scope": "Full home 4BHK redesign: new kitchen, bedrooms, living room flooring, and study addition",
+      "budget": "35-40 lakh",
+      "timeline": "Starting February 2027",
+      "decision_maker": "Preethi Nair",
+      "source": "Pune Mirror article (2024)",
+      "asked_about_pricing": false
+    },
+    "missing_info": [
+      "callback number"
+    ],
+    "summary": "4BHK full home redesign (~1,950 sq ft) on NIBM Road. Execution start planned for Feb 2027; prefers warm, earthy, minimal aesthetic. Shortlisted 3 studios; serious but not in a rush. Budget: mentioned by caller. Callback number missing from record.",
+    "suggested_next_step": "Retrieve phone number from web form system logs and contact to schedule initial consultation."
+  },
+  "model": "gemini-3.6-flash",
+  "inputTokens": 4240,
+  "outputTokens": 2081,
+  "attempts": 1,
+  "error": null
+}

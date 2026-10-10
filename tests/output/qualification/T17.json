@@ -1,0 +1,35 @@
+{
+  "qualification": {
+    "status": "qualified",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: Residential 3BHK redesign (kitchen, wardrobes, living room) with design and execution",
+      "C2 PASS: Pimple Saudagar is within PCMC service area",
+      "C3 PASS: Completion targeted by March (over 10 weeks away)",
+      "C4 PASS: Budget not mentioned",
+      "C5 PASS: Resident/owner calling"
+    ],
+    "collected": {
+      "name": "Ritu Kapoor",
+      "phone": "+910000000000",
+      "project_type": "home",
+      "location": "Pimple Saudagar",
+      "property_status": "occupied",
+      "carpet_area_sqft": 1050,
+      "scope": "3BHK: kitchen, wardrobes, living room",
+      "budget": null,
+      "timeline": "Complete by March",
+      "decision_maker": "owner / resident",
+      "source": null,
+      "asked_about_pricing": false
+    },
+    "missing_info": [],
+    "summary": "Caller: Ritu Kapoor, 3BHK (1,050 sq ft) in Pimple Saudagar. Scope: Kitchen, wardrobes, and living room redesign. Status: Occupied 2 years; currently has basic builder furniture. Timeline: Needs completion by March. Note: First call disconnected; caller re-dialled promptly.",
+    "suggested_next_step": "Call back to confirm and book site consultation in Pimple Saudagar."
+  },
+  "model": "gemini-3.6-flash",
+  "inputTokens": 4266,
+  "outputTokens": 1305,
+  "attempts": 1,
+  "error": null
+}

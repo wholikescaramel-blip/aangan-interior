@@ -1,0 +1,35 @@
+{
+  "qualification": {
+    "status": "not_qualified",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C3 FAIL: project completion requested before Diwali (approx 3 weeks away, under the 6-week minimum lead time); caller did not accept a post-Diwali timeline"
+    ],
+    "collected": {
+      "name": null,
+      "phone": null,
+      "project_type": "home",
+      "location": null,
+      "property_status": null,
+      "carpet_area_sqft": null,
+      "scope": "living room and kitchen redo",
+      "budget": null,
+      "timeline": "before Diwali (approx 3 weeks away)",
+      "decision_maker": null,
+      "source": null,
+      "asked_about_pricing": false
+    },
+    "missing_info": [
+      "name (M4)",
+      "callback number (M5)",
+      "location (M2)"
+    ],
+    "summary": "Caller wanted living room and kitchen redone before Diwali (~3 weeks away). Informed that lead time requires at least 8-10 weeks. Caller enquired about starting after Diwali but did not commit. Call ended with caller stating they would think and call back. Budget: not mentioned.",
+    "suggested_next_step": "No action needed; call logged as not qualified due to timeline unless caller calls back to proceed with post-Diwali execution."
+  },
+  "model": "gemini-3.7-flash",
+  "inputTokens": 4213,
+  "outputTokens": 2566,
+  "attempts": 1,
+  "error": null
+}

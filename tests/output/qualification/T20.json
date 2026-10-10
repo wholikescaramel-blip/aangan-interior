@@ -1,0 +1,35 @@
+{
+  "qualification": {
+    "status": "qualified",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: Full 2BHK residential interior design and execution project",
+      "C2 PASS: Site located in Magarpatta (in service area)",
+      "C3 PASS: Timeline flexible with execution start in January (>10 weeks out)",
+      "C4 PASS: Budget not mentioned",
+      "C5 PASS: Decision-makers are owners (Pooja and her husband)"
+    ],
+    "collected": {
+      "name": "Pooja",
+      "phone": "+910000000000",
+      "project_type": "home",
+      "location": "Magarpatta",
+      "property_status": null,
+      "carpet_area_sqft": 900,
+      "scope": "2BHK (kitchen, 2 bedrooms, living room)",
+      "budget": null,
+      "timeline": "January start for execution",
+      "decision_maker": "Pooja and husband (co-owners)",
+      "source": null,
+      "asked_about_pricing": false
+    },
+    "missing_info": [],
+    "summary": "Caller: Pooja Scope: 2BHK full home interiors (900 sq ft) in Magarpatta Timeline: Flexible, looking for January execution start Decision-makers: Pooja and her husband Budget: not mentioned",
+    "suggested_next_step": "Call back to schedule an in-person or online consultation with Pooja and her husband."
+  },
+  "model": "gemini-3.6-flash",
+  "inputTokens": 4210,
+  "outputTokens": 1015,
+  "attempts": 1,
+  "error": null
+}

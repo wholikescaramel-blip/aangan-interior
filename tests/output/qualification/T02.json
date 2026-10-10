@@ -1,0 +1,38 @@
+{
+  "qualification": {
+    "status": "needs_review",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: 2BHK full home redesign with execution is within scope",
+      "C2 PASS: Wakad is within PCMC service area",
+      "C3 needs_review: Move-in targeted for November (~8-9 weeks from call date), falling within the tight 6-10 week window",
+      "M4 missing: Caller's name was not collected before the call ended",
+      "M5 missing: Callback number was not confirmed by the caller"
+    ],
+    "collected": {
+      "name": null,
+      "phone": null,
+      "project_type": "home",
+      "location": "Wakad",
+      "property_status": null,
+      "carpet_area_sqft": 950,
+      "scope": "full home 2BHK redesign including modular kitchen, wardrobes, living room, and both bedrooms",
+      "budget": null,
+      "timeline": "Move in November, design starting October",
+      "decision_maker": null,
+      "source": "Instagram",
+      "asked_about_pricing": true
+    },
+    "missing_info": [
+      "name",
+      "callback number confirmation"
+    ],
+    "summary": "Enquiry for full redesign of a 950 sq ft 2BHK in Wakad. Timeline is tight with move-in planned for November. Pushed twice for ballpark pricing before agreeing to a consultation. Budget: not mentioned. Call ended before name and callback details could be captured.",
+    "suggested_next_step": "Call back on caller ID to collect name, confirm contact details, and assess November timeline feasibility."
+  },
+  "model": "gemini-3.7-flash",
+  "inputTokens": 4307,
+  "outputTokens": 1709,
+  "attempts": 1,
+  "error": null
+}

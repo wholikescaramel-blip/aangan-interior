@@ -1,0 +1,38 @@
+{
+  "qualification": {
+    "status": "needs_review",
+    "not_a_lead_tag": null,
+    "reasons": [
+      "C1 PASS: 3BHK flat renovation covering kitchen, wardrobes, and living room",
+      "C2 PASS: site in Aundh (within service area)",
+      "M3 missing: timeline for project completion was not discussed",
+      "M4 missing: caller name was not collected before call ended"
+    ],
+    "collected": {
+      "name": null,
+      "phone": null,
+      "project_type": "home",
+      "location": "Aundh",
+      "property_status": null,
+      "carpet_area_sqft": 1100,
+      "scope": "kitchen, wardrobes in both bedrooms, living room",
+      "budget": null,
+      "timeline": null,
+      "decision_maker": null,
+      "source": null,
+      "asked_about_pricing": true
+    },
+    "missing_info": [
+      "name",
+      "timeline",
+      "callback number confirmation"
+    ],
+    "summary": "Caller wants to redo an 1,100 sq ft 3BHK in Aundh (kitchen, wardrobes, living room). Pressed repeatedly for rough pricing ballpark before agreeing to book. Call ended before contact details or consultation slot could be finalized. Timeline: not mentioned. Budget: not mentioned.",
+    "suggested_next_step": "Call back using caller ID to collect name, completion timeline, and schedule the consultation."
+  },
+  "model": "gemini-3.7-flash",
+  "inputTokens": 4262,
+  "outputTokens": 1603,
+  "attempts": 1,
+  "error": null
+}
