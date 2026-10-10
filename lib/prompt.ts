@@ -20,12 +20,7 @@ export function renderAgentPrompt(vars: PromptVars, version = AGENT_PROMPT_VERSI
 
 export function fillPrompt(template: string, vars: PromptVars): string {
   const price = vars.approvedPriceBandText?.trim() ?? "";
-  let out = template.replace(/<!--[\s\S]*?-->\s*/g, "");
-  // {{#if APPROVED_PRICE_BAND_TEXT}} ... {{else}} ... {{/if}}
-  out = out.replace(
-    /\{\{#if APPROVED_PRICE_BAND_TEXT\}\}([\s\S]*?)\{\{else\}\}([\s\S]*?)\{\{\/if\}\}/g,
-    (_m, ifPart: string, elsePart: string) => (price ? ifPart : elsePart).trim(),
-  );
+  const out = template.replace(/<!--[\s\S]*?-->\s*/g, "");
   const map: Record<string, string> = {
     IS_BUSINESS_HOURS: String(vars.isBusinessHours),
     CALLBACK_WINDOW: vars.callbackWindow,
@@ -34,7 +29,13 @@ export function fillPrompt(template: string, vars: PromptVars): string {
     CALLER_NUMBER_LAST4: vars.callerNumberLast4 ?? "",
     TODAY: vars.today,
   };
-  return out.replace(/\{\{([A-Z0-9_]+)\}\}/g, (m, key: string) => (key in map ? map[key] : m));
+  // {{#if VAR}} ... {{else}} ... {{/if}}: VAR is true when non-empty and not "false".
+  const truthy = (key: string) => !!map[key] && map[key] !== "false";
+  const withIfs = out.replace(
+    /\{\{#if ([A-Z0-9_]+)\}\}([\s\S]*?)(?:\{\{else\}\}([\s\S]*?))?\{\{\/if\}\}/g,
+    (_m, key: string, ifPart: string, elsePart = "") => (truthy(key) ? ifPart : elsePart).trim(),
+  );
+  return withIfs.replace(/\{\{([A-Z0-9_]+)\}\}/g, (m, key: string) => (key in map ? map[key] : m));
 }
 
 /** Business hours are Monday–Saturday 10:00–19:00 IST; Sunday is closed. */

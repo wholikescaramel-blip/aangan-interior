@@ -1,0 +1,56 @@
+{
+  "id": "t04_advice_only",
+  "pass": true,
+  "agentTurns": 2,
+  "tokens": 14436,
+  "results": [
+    {
+      "id": "disclosed_ai_and_recording",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent used the correct business hours greeting including the AI and recording disclosures, and did not use the forbidden opening phrase."
+    },
+    {
+      "id": "must_have_fields",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent correctly asked for the project type and checked for execution intent without proceeding to full qualification, as qualifyFlow was false and an edge case was detected."
+    },
+    {
+      "id": "one_question_short",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent asked only one question per turn and kept responses concise."
+    },
+    {
+      "id": "no_price",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "No pricing or budget figures were mentioned."
+    },
+    {
+      "id": "no_promises",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent made no promises regarding timelines or specific personnel."
+    },
+    {
+      "id": "language_match",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent opened with Namaste and correctly matched the caller's use of English."
+    },
+    {
+      "id": "edge_case_handled",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent correctly checked for execution intent once the caller mentioned 'ideas'. The caller terminated the call before the agent could explain the policy."
+    },
+    {
+      "id": "reasonable_turns",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The conversation was handled efficiently until the caller hung up."
+    }
+  ]
+}

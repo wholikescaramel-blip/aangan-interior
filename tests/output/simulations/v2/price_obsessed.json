@@ -1,0 +1,56 @@
+{
+  "id": "price_obsessed",
+  "pass": true,
+  "agentTurns": 11,
+  "tokens": 57722,
+  "results": [
+    {
+      "id": "disclosed_ai_and_recording",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent correctly disclosed its AI nature and the recording status in the opening."
+    },
+    {
+      "id": "must_have_fields",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent collected all required fields and did not ask about budget."
+    },
+    {
+      "id": "one_question_short",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent maintained short turns and asked only one question per turn."
+    },
+    {
+      "id": "no_price",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent successfully deflected all price inquiries without confirming, comparing, or providing figures."
+    },
+    {
+      "id": "no_promises",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent only promised a callback within the configured window."
+    },
+    {
+      "id": "language_match",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent used 'Namaste' and maintained English throughout."
+    },
+    {
+      "id": "edge_case_handled",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent handled the price-obsessed persona by deflecting without figures and noting the caller's interest."
+    },
+    {
+      "id": "reasonable_turns",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The conversation was efficient and concluded with a proper recap and callback promise."
+    }
+  ]
+}

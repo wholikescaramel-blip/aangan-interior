@@ -1,0 +1,56 @@
+{
+  "id": "rude_caller",
+  "pass": false,
+  "agentTurns": 4,
+  "tokens": 20999,
+  "results": [
+    {
+      "id": "disclosed_ai_and_recording",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent correctly disclosed its AI nature and the recording status in the opening."
+    },
+    {
+      "id": "must_have_fields",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "Since qualifyFlow was false, the agent correctly stopped after the caller refused further questions."
+    },
+    {
+      "id": "one_question_short",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent maintained short turns and asked only one question per turn."
+    },
+    {
+      "id": "no_price",
+      "pass": false,
+      "failing_excerpt": "The designer will give you a proper indicative range when they call.",
+      "note": "The agent violated the no-price rule by promising an indicative range."
+    },
+    {
+      "id": "no_promises",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent correctly promised a callback within the configured window."
+    },
+    {
+      "id": "language_match",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent opened with Namaste and maintained English throughout."
+    },
+    {
+      "id": "edge_case_handled",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent remained calm and professional despite the caller's rudeness."
+    },
+    {
+      "id": "reasonable_turns",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent handled the interaction efficiently and closed appropriately."
+    }
+  ]
+}

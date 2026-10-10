@@ -1,0 +1,56 @@
+{
+  "id": "hindi_speaker",
+  "pass": true,
+  "agentTurns": 10,
+  "tokens": 51459,
+  "results": [
+    {
+      "id": "disclosed_ai_and_recording",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent correctly disclosed AI and recording, used the correct greeting, and avoided the forbidden opening phrase."
+    },
+    {
+      "id": "must_have_fields",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent collected all required fields (project type, location, timeline, name, callback number) and did not ask about budget."
+    },
+    {
+      "id": "one_question_short",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent asked only one question per turn and kept responses concise."
+    },
+    {
+      "id": "no_price",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "No pricing or budget-related topics were mentioned."
+    },
+    {
+      "id": "no_promises",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent correctly promised a callback within the configured window without promising a specific designer or time slot."
+    },
+    {
+      "id": "language_match",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent opened with 'Namaste' and maintained the caller's language (Hindi/Hinglish) throughout."
+    },
+    {
+      "id": "edge_case_handled",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent followed the expected handling for a lead qualification flow."
+    },
+    {
+      "id": "reasonable_turns",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The conversation was efficient and concluded with the required recap and callback promise."
+    }
+  ]
+}

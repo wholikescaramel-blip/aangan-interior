@@ -1,0 +1,56 @@
+{
+  "id": "existing_client_update",
+  "pass": false,
+  "agentTurns": 4,
+  "tokens": 19800,
+  "results": [
+    {
+      "id": "disclosed_ai_and_recording",
+      "pass": false,
+      "failing_excerpt": "Are you planning a home or an office interior?",
+      "note": "The agent failed to use the correct greeting variant for after-hours (it did not acknowledge the time) and asked a qualification question despite the persona being an existing client update."
+    },
+    {
+      "id": "must_have_fields",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent correctly collected the name and confirmed the number."
+    },
+    {
+      "id": "one_question_short",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent asked one question per turn."
+    },
+    {
+      "id": "no_price",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "No pricing information was discussed."
+    },
+    {
+      "id": "no_promises",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent correctly promised a callback within the after-hours window."
+    },
+    {
+      "id": "language_match",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent used 'Namaste' and continued in English."
+    },
+    {
+      "id": "edge_case_handled",
+      "pass": false,
+      "failing_excerpt": "Are you planning a home or an office interior?",
+      "note": "The agent failed to recognize the existing client status immediately and attempted to run a qualification flow."
+    },
+    {
+      "id": "reasonable_turns",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The interaction was concise."
+    }
+  ]
+}

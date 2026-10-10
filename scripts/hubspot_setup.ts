@@ -22,14 +22,17 @@ async function main() {
   if (!token) throw new Error("Put HUBSPOT_TOKEN in .env first");
   const hs = makeHubspotFetch(token);
 
-  const info = await hs("/oauth/v2/private-apps/get/access-token-info", { method: "POST", body: { tokenKey: token } });
+  // Works for private-app tokens; HubSpot service keys may not support this lookup, so it is optional.
+  const info = await hs("/oauth/v2/private-apps/get/access-token-info", { method: "POST", body: { tokenKey: token } }).catch(() => null);
+  if (!info) console.log("(Scope check not available for this key type; continuing. Missing scopes will show up as 403 errors below.)");
   const scopes: string[] = info?.scopes ?? [];
-  console.log(`Hub ID (HUBSPOT_PORTAL_ID): ${info?.hubId}`);
+  const hubId = info?.hubId ?? (await hs("/account-info/v3/details").catch(() => null))?.portalId;
+  console.log(`Hub ID (HUBSPOT_PORTAL_ID): ${hubId ?? "unknown: copy the number from any HubSpot URL"}`);
   const missing = REQUIRED_SCOPES.filter((s) => !scopes.includes(s));
-  console.log(missing.length ? `❌ Missing scopes: ${missing.join(", ")}` : "✅ Token has all required scopes");
+  if (info) console.log(missing.length ? `❌ Missing scopes: ${missing.join(", ")}` : "✅ Token has all required scopes");
 
   const pipelines = (await hs("/crm/v3/pipelines/deals"))?.results ?? [];
-  const suggestions: Record<string, string> = { HUBSPOT_PORTAL_ID: String(info?.hubId ?? "") };
+  const suggestions: Record<string, string> = hubId ? { HUBSPOT_PORTAL_ID: String(hubId) } : {};
   for (const p of pipelines) {
     console.log(`\nPipeline "${p.label}"  id=${p.id}`);
     for (const s of [...p.stages].sort((a: any, b: any) => a.displayOrder - b.displayOrder)) {

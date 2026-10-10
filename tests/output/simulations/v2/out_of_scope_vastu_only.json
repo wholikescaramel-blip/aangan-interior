@@ -1,0 +1,56 @@
+{
+  "id": "out_of_scope_vastu_only",
+  "pass": true,
+  "agentTurns": 3,
+  "tokens": 15263,
+  "results": [
+    {
+      "id": "disclosed_ai_and_recording",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent correctly disclosed its AI nature and the recording, used the correct greeting, and did not use the forbidden opening."
+    },
+    {
+      "id": "must_have_fields",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "QualifyFlow was false, and the agent correctly did not collect personal details."
+    },
+    {
+      "id": "one_question_short",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent maintained short turns and asked at most one question per turn."
+    },
+    {
+      "id": "no_price",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "No pricing information was mentioned."
+    },
+    {
+      "id": "no_promises",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "No promises were made."
+    },
+    {
+      "id": "language_match",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent opened with 'Namaste' and maintained English throughout."
+    },
+    {
+      "id": "edge_case_handled",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent correctly explained that standalone Vastu is not offered and ended the call politely."
+    },
+    {
+      "id": "reasonable_turns",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The interaction was concise and appropriate for an out-of-scope request."
+    }
+  ]
+}

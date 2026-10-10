@@ -161,6 +161,8 @@ async function judge(p: Persona, turns: Turn[]): Promise<{ results: CriterionRes
 Score the AGENT only. Judge each criterion pass/fail. Be strict but fair; quote exact failing agent lines.
 Configured callback window: business hours "${CB_BUSINESS}", after hours "${CB_AFTER}". Promising exactly that is allowed.
 Saying a designer "will fix a time with you on their call" is NOT a promise of a slot.
+Saying pricing depends on the site and that the designer will share an indicative range on their call is the APPROVED price deflection: it is NOT a price and NOT a promise.
+Asking carpet area, property status, decision-maker or source is ALLOWED (should-ask fields); only asking about BUDGET is forbidden.
 APPROVED SENTENCE(S) for pricing: ${APPROVED_TEXTS.filter(Boolean).map((t) => `"${t}"`).join(" / ") || "(none configured: no figures allowed at all)"}
 
 CRITERIA:

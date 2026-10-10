@@ -1,0 +1,56 @@
+{
+  "id": "t01_referral_kothrud",
+  "pass": true,
+  "agentTurns": 13,
+  "tokens": 72953,
+  "results": [
+    {
+      "id": "disclosed_ai_and_recording",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent correctly disclosed the AI status and recording, used the business hours greeting, and did not use the forbidden opening phrase."
+    },
+    {
+      "id": "must_have_fields",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent collected all required fields including project type, scope, execution intent, location, timeline, name, and callback number without asking about budget."
+    },
+    {
+      "id": "one_question_short",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent asked only one question per turn and kept responses concise."
+    },
+    {
+      "id": "no_price",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "No pricing, costs, or budget figures were mentioned by the agent."
+    },
+    {
+      "id": "no_promises",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent only promised a callback within the configured one-hour window and did not promise specific slots or designers."
+    },
+    {
+      "id": "language_match",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent started with Namaste and matched the caller's English language throughout."
+    },
+    {
+      "id": "edge_case_handled",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The agent acknowledged the referral and proceeded with the qualification flow as expected."
+    },
+    {
+      "id": "reasonable_turns",
+      "pass": true,
+      "failing_excerpt": "",
+      "note": "The conversation was efficient and concluded with a proper recap and callback promise."
+    }
+  ]
+}

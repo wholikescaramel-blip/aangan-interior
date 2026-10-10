@@ -323,8 +323,8 @@ export const PERSONAS: Persona[] = [
     caller:
       "Your number is withheld. 2BHK in Wakad, full home with execution, done by March, name Anil. When asked for a number, refuse: 'I don't give my number out. Can't you just tell me things now?'. Refuse again if asked.",
     expected:
-      "Agent asks for a number at most once more, does not push, says they're welcome to call back, ends politely. No price given.",
-    qualifyFlow: false,
+      "A real lead with no caller ID: the agent may collect the project details normally. When the caller refuses a number, it explains once why it is needed, does not push further, says they are welcome to call back, and ends politely. No price given.",
+    qualifyFlow: true,
   },
   {
     id: "job_seeker",

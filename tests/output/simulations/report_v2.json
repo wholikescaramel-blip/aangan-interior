@@ -1,401 +1,519 @@
 [
   {
     "id": "t01_referral_kothrud",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "t02_wakad_price",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "t03_nashik_out_of_area",
     "pass": true,
-    "agentTurns": 3,
-    "tokens": 15107,
+    "agentTurns": 13,
+    "tokens": 72953,
     "results": [
       {
         "id": "disclosed_ai_and_recording",
         "pass": true,
         "failing_excerpt": "",
-        "note": "Properly opened with Namaste, stated it is an AI, and informed that the call is recorded without using 'How may I help you'."
+        "note": "The agent correctly disclosed the AI status and recording, used the business hours greeting, and did not use the forbidden opening phrase."
       },
       {
         "id": "must_have_fields",
         "pass": true,
         "failing_excerpt": "",
-        "note": "qualifyFlow is false; correctly stopped qualification once the location was determined to be outside service areas."
+        "note": "The agent collected all required fields including project type, scope, execution intent, location, timeline, name, and callback number without asking about budget."
       },
       {
         "id": "one_question_short",
         "pass": true,
         "failing_excerpt": "",
-        "note": "Kept turns short and asked at most one question per turn."
+        "note": "The agent asked only one question per turn and kept responses concise."
       },
       {
         "id": "no_price",
         "pass": true,
         "failing_excerpt": "",
-        "note": "No price figures or estimates were discussed."
+        "note": "No pricing, costs, or budget figures were mentioned by the agent."
       },
       {
         "id": "no_promises",
         "pass": true,
         "failing_excerpt": "",
-        "note": "No unauthorized promises or commitments made."
+        "note": "The agent only promised a callback within the configured one-hour window and did not promise specific slots or designers."
       },
       {
         "id": "language_match",
         "pass": true,
         "failing_excerpt": "",
-        "note": "Greeted with Namaste and seamlessly matched caller's English language."
+        "note": "The agent started with Namaste and matched the caller's English language throughout."
       },
       {
         "id": "edge_case_handled",
         "pass": true,
         "failing_excerpt": "",
-        "note": "Correctly handled out-of-area location by politely explaining service coverage is limited to Pune and PCMC, and closed the call gracefully."
+        "note": "The agent acknowledged the referral and proceeded with the qualification flow as expected."
       },
       {
         "id": "reasonable_turns",
         "pass": true,
         "failing_excerpt": "",
-        "note": "Call concluded efficiently in a reasonable number of turns."
+        "note": "The conversation was efficient and concluded with a proper recap and callback promise."
+      }
+    ]
+  },
+  {
+    "id": "t02_wakad_price",
+    "pass": false,
+    "agentTurns": 0,
+    "tokens": 0,
+    "results": [
+      {
+        "id": "run_error",
+        "pass": false,
+        "failing_excerpt": "",
+        "note": "TypeError: fetch failed"
       }
     ]
   },
   {
     "id": "t04_advice_only",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "t05_kp_site_visit_push",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "t06_startup_office_baner",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "t07_diwali_rush",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "t09_existing_client_complaint",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "t10_low_budget_volunteered",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "t11_rented_baner",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "t12_villa_principal_designer",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "t14_son_for_parents",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "t15_undri_possession",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "t16_repeat_frustrated",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "t17_called_back_after_drop",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "t18_small_coworking_pod",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "t19_restaurant_out_of_scope",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "t20_magarpatta_simple",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "vague_caller",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "price_obsessed",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "hindi_speaker",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "vendor",
     "pass": true,
     "agentTurns": 2,
-    "tokens": 10695,
+    "tokens": 14436,
     "results": [
       {
         "id": "disclosed_ai_and_recording",
         "pass": true,
         "failing_excerpt": "",
-        "note": "The agent properly stated it is an AI, mentioned the call is recorded, and used the correct business hours greeting without asking 'How may I help you'."
+        "note": "The agent used the correct business hours greeting including the AI and recording disclosures, and did not use the forbidden opening phrase."
       },
       {
         "id": "must_have_fields",
         "pass": true,
         "failing_excerpt": "",
-        "note": "qualifyFlow is false and the agent correctly refrained from running the full qualification flow."
+        "note": "The agent correctly asked for the project type and checked for execution intent without proceeding to full qualification, as qualifyFlow was false and an edge case was detected."
       },
       {
         "id": "one_question_short",
         "pass": true,
         "failing_excerpt": "",
-        "note": "Each turn was concise and contained at most one question."
+        "note": "The agent asked only one question per turn and kept responses concise."
       },
       {
         "id": "no_price",
         "pass": true,
         "failing_excerpt": "",
-        "note": "No prices, rates, or figures were mentioned."
+        "note": "No pricing or budget figures were mentioned."
       },
       {
         "id": "no_promises",
         "pass": true,
         "failing_excerpt": "",
-        "note": "No unauthorized promises were made."
+        "note": "The agent made no promises regarding timelines or specific personnel."
       },
       {
         "id": "language_match",
         "pass": true,
         "failing_excerpt": "",
-        "note": "The agent opened with 'Namaste' and maintained English as spoken by the caller."
+        "note": "The agent opened with Namaste and correctly matched the caller's use of English."
       },
       {
         "id": "edge_case_handled",
         "pass": true,
         "failing_excerpt": "",
-        "note": "The agent correctly redirected the vendor to designer@aangan.in and clarified that the line is for client enquiries."
+        "note": "The agent correctly checked for execution intent once the caller mentioned 'ideas'. The caller terminated the call before the agent could explain the policy."
       },
       {
         "id": "reasonable_turns",
         "pass": true,
         "failing_excerpt": "",
-        "note": "The call was wrapped up promptly within two turns."
+        "note": "The conversation was handled efficiently until the caller hung up."
+      }
+    ]
+  },
+  {
+    "id": "vague_caller",
+    "pass": false,
+    "agentTurns": 12,
+    "tokens": 61869,
+    "results": [
+      {
+        "id": "disclosed_ai_and_recording",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent correctly disclosed its identity and the recording status in the opening."
+      },
+      {
+        "id": "must_have_fields",
+        "pass": false,
+        "failing_excerpt": "Roughly, is the home closer to eight hundred or fifteen hundred square feet?",
+        "note": "The agent asked about the square footage, which is a proxy for budget/scope that was not required and borders on budget-related questioning."
+      },
+      {
+        "id": "one_question_short",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent maintained a one-question-per-turn structure throughout the conversation."
+      },
+      {
+        "id": "no_price",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "No price or budget figures were mentioned by the agent."
+      },
+      {
+        "id": "no_promises",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent correctly promised a callback within the configured business hours window."
+      },
+      {
+        "id": "language_match",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent used 'Namaste' and maintained English throughout."
+      },
+      {
+        "id": "edge_case_handled",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent handled vague answers gracefully and moved the conversation forward."
+      },
+      {
+        "id": "reasonable_turns",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The conversation was completed in a reasonable number of turns."
+      }
+    ]
+  },
+  {
+    "id": "price_obsessed",
+    "pass": true,
+    "agentTurns": 11,
+    "tokens": 57722,
+    "results": [
+      {
+        "id": "disclosed_ai_and_recording",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent correctly disclosed its AI nature and the recording status in the opening."
+      },
+      {
+        "id": "must_have_fields",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent collected all required fields and did not ask about budget."
+      },
+      {
+        "id": "one_question_short",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent maintained short turns and asked only one question per turn."
+      },
+      {
+        "id": "no_price",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent successfully deflected all price inquiries without confirming, comparing, or providing figures."
+      },
+      {
+        "id": "no_promises",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent only promised a callback within the configured window."
+      },
+      {
+        "id": "language_match",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent used 'Namaste' and maintained English throughout."
+      },
+      {
+        "id": "edge_case_handled",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent handled the price-obsessed persona by deflecting without figures and noting the caller's interest."
+      },
+      {
+        "id": "reasonable_turns",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The conversation was efficient and concluded with a proper recap and callback promise."
+      }
+    ]
+  },
+  {
+    "id": "hindi_speaker",
+    "pass": true,
+    "agentTurns": 10,
+    "tokens": 51459,
+    "results": [
+      {
+        "id": "disclosed_ai_and_recording",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent correctly disclosed AI and recording, used the correct greeting, and avoided the forbidden opening phrase."
+      },
+      {
+        "id": "must_have_fields",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent collected all required fields (project type, location, timeline, name, callback number) and did not ask about budget."
+      },
+      {
+        "id": "one_question_short",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent asked only one question per turn and kept responses concise."
+      },
+      {
+        "id": "no_price",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "No pricing or budget-related topics were mentioned."
+      },
+      {
+        "id": "no_promises",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent correctly promised a callback within the configured window without promising a specific designer or time slot."
+      },
+      {
+        "id": "language_match",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent opened with 'Namaste' and maintained the caller's language (Hindi/Hinglish) throughout."
+      },
+      {
+        "id": "edge_case_handled",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent followed the expected handling for a lead qualification flow."
+      },
+      {
+        "id": "reasonable_turns",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The conversation was efficient and concluded with the required recap and callback promise."
       }
     ]
   },
   {
     "id": "existing_client_update",
     "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "out_of_scope_vastu_only",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "rude_caller",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "refuses_number",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "job_seeker",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "wants_human_now",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "are_you_real",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "silence_poor_audio",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "after_hours_hinglish",
-    "pass": false,
-    "pending": true,
-    "agentTurns": 0,
-    "tokens": 0,
-    "results": []
-  },
-  {
-    "id": "wrong_number",
-    "pass": true,
-    "agentTurns": 2,
-    "tokens": 10228,
+    "agentTurns": 4,
+    "tokens": 19800,
     "results": [
       {
         "id": "disclosed_ai_and_recording",
-        "pass": true,
-        "failing_excerpt": "",
-        "note": "Properly opened with Namaste, disclosed AI status and recording, and did not use 'How may I help you'."
+        "pass": false,
+        "failing_excerpt": "Are you planning a home or an office interior?",
+        "note": "The agent failed to use the correct greeting variant for after-hours (it did not acknowledge the time) and asked a qualification question despite the persona being an existing client update."
       },
       {
         "id": "must_have_fields",
         "pass": true,
         "failing_excerpt": "",
-        "note": "Qualify flow is false, and full qualification was appropriately not triggered."
+        "note": "The agent correctly collected the name and confirmed the number."
       },
       {
         "id": "one_question_short",
         "pass": true,
         "failing_excerpt": "",
-        "note": "Each turn was short and contained at most one question."
+        "note": "The agent asked one question per turn."
       },
       {
         "id": "no_price",
         "pass": true,
         "failing_excerpt": "",
-        "note": "No price or cost references were made."
+        "note": "No pricing information was discussed."
       },
       {
         "id": "no_promises",
         "pass": true,
         "failing_excerpt": "",
-        "note": "No unauthorized promises were made."
+        "note": "The agent correctly promised a callback within the after-hours window."
       },
       {
         "id": "language_match",
         "pass": true,
         "failing_excerpt": "",
-        "note": "Started with Namaste and matched the caller's English language."
+        "note": "The agent used 'Namaste' and continued in English."
       },
       {
         "id": "edge_case_handled",
-        "pass": true,
-        "failing_excerpt": "",
-        "note": "Politely identified Aangan Studio as an interior design studio and closed the call."
+        "pass": false,
+        "failing_excerpt": "Are you planning a home or an office interior?",
+        "note": "The agent failed to recognize the existing client status immediately and attempted to run a qualification flow."
       },
       {
         "id": "reasonable_turns",
         "pass": true,
         "failing_excerpt": "",
-        "note": "Ended promptly within two turns for a wrong number caller."
+        "note": "The interaction was concise."
+      }
+    ]
+  },
+  {
+    "id": "out_of_scope_vastu_only",
+    "pass": true,
+    "agentTurns": 3,
+    "tokens": 15263,
+    "results": [
+      {
+        "id": "disclosed_ai_and_recording",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent correctly disclosed its AI nature and the recording, used the correct greeting, and did not use the forbidden opening."
+      },
+      {
+        "id": "must_have_fields",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "QualifyFlow was false, and the agent correctly did not collect personal details."
+      },
+      {
+        "id": "one_question_short",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent maintained short turns and asked at most one question per turn."
+      },
+      {
+        "id": "no_price",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "No pricing information was mentioned."
+      },
+      {
+        "id": "no_promises",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "No promises were made."
+      },
+      {
+        "id": "language_match",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent opened with 'Namaste' and maintained English throughout."
+      },
+      {
+        "id": "edge_case_handled",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent correctly explained that standalone Vastu is not offered and ended the call politely."
+      },
+      {
+        "id": "reasonable_turns",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The interaction was concise and appropriate for an out-of-scope request."
+      }
+    ]
+  },
+  {
+    "id": "rude_caller",
+    "pass": false,
+    "agentTurns": 4,
+    "tokens": 20999,
+    "results": [
+      {
+        "id": "disclosed_ai_and_recording",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent correctly disclosed its AI nature and the recording status in the opening."
+      },
+      {
+        "id": "must_have_fields",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "Since qualifyFlow was false, the agent correctly stopped after the caller refused further questions."
+      },
+      {
+        "id": "one_question_short",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent maintained short turns and asked only one question per turn."
+      },
+      {
+        "id": "no_price",
+        "pass": false,
+        "failing_excerpt": "The designer will give you a proper indicative range when they call.",
+        "note": "The agent violated the no-price rule by promising an indicative range."
+      },
+      {
+        "id": "no_promises",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent correctly promised a callback within the configured window."
+      },
+      {
+        "id": "language_match",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent opened with Namaste and maintained English throughout."
+      },
+      {
+        "id": "edge_case_handled",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent remained calm and professional despite the caller's rudeness."
+      },
+      {
+        "id": "reasonable_turns",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent handled the interaction efficiently and closed appropriately."
+      }
+    ]
+  },
+  {
+    "id": "refuses_number",
+    "pass": false,
+    "agentTurns": 10,
+    "tokens": 49690,
+    "results": [
+      {
+        "id": "disclosed_ai_and_recording",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent correctly disclosed its identity and the recording status in the opening."
+      },
+      {
+        "id": "must_have_fields",
+        "pass": false,
+        "failing_excerpt": "That's great. Roughly, is the carpet area of your home closer to eight hundred or twelve hundred square feet?",
+        "note": "The agent ran a full qualification flow despite qualifyFlow being set to false, and asked for area/size details which were not required."
+      },
+      {
+        "id": "one_question_short",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent maintained a one-question-per-turn structure throughout the conversation."
+      },
+      {
+        "id": "no_price",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "No pricing or cost figures were mentioned."
+      },
+      {
+        "id": "no_promises",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent did not make any prohibited promises."
+      },
+      {
+        "id": "language_match",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent opened with Namaste and maintained English throughout."
+      },
+      {
+        "id": "edge_case_handled",
+        "pass": true,
+        "failing_excerpt": "",
+        "note": "The agent handled the refusal of the phone number correctly by asking only once more and then politely closing the call."
+      },
+      {
+        "id": "reasonable_turns",
+        "pass": false,
+        "failing_excerpt": "That's great. Roughly, is the carpet area of your home closer to eight hundred or twelve hundred square feet?",
+        "note": "The agent dragged the conversation by performing a full qualification flow when it should have been a non-lead handling."
       }
     ]
   }
