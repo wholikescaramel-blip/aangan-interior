@@ -3,7 +3,7 @@ import { parseVaaniPayload, parseVaaniPostprocessing, verifyVaani, type VaaniRoo
 import { processCall, storeEnquiry } from "@/lib/pipeline";
 import { logError, sql } from "@/lib/db";
 
-export const maxDuration = 60;
+export const maxDuration = 300;
 
 /**
  * Vaani webhook (Settings -> Webhooks; one URL for all events).

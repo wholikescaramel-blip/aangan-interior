@@ -3,7 +3,7 @@ import { HubSpot } from "@/lib/hubspot";
 import { processCall } from "@/lib/pipeline";
 import { safeEqual } from "@/lib/vaani";
 
-export const maxDuration = 60;
+export const maxDuration = 300;
 
 /**
  * Hourly job (called by GitHub Actions; Vercel Hobby cron is limited to daily):
